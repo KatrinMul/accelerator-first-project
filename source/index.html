@@ -10,10 +10,57 @@
 
   <body class="page-body">
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+    <img src="/_spritemap#sprite-logo" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg>
+
+    <header class="header" data-test="header">
+      <a class="header__link" href="#">
+          <img class="header__logo" src="/_spritemap#sprite-logo" alt="Логотип" width="32" height="36">
+      </a>
+    <nav class="header__nav nav nav--closed">
+      <ul class="nav__list main-menu main-menu--index">
+        <li class="main-menu__item main-menu__item--current">
+          <a class="main-menu__link " href="#">
+            <span class="main-menu__link-text">Главная</span>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">
+            <span class="main-menu__link-text">Каталог</span>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">
+            <span class="main-menu__link-text">Доставка</span>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">
+            <span class="main-menu__link-text">О нас</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav__list-button nbutton">
+        <li class="nbutton__item">
+          <a class="nbutton__button nbutton__button--login" href="#">
+            <span class="nbutton__button-text">Войти</span>
+          </a>
+        </li>
+        <li class="nbutton__item">
+          <a class="nbutton__button nbutton__button--basket" href="#">
+            <span class="nbutton__button-text">Корзина</span>
+          </a>
+        </li>
+      </ul>
+      <button class="nav__button" type="button">
+        <span class="visually-hidden">Закрыть/открыть меню</span>
+      </button>
+    </nav>
+
+  </header>
+
     <!-- примеры требуемых атрибутов data-test="*" -->
     <div data-test="header">header</div>
     <div data-test="hero">hero</div>

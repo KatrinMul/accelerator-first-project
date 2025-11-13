@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  border: none;
+  min-width: 180px;
+  min-height: 56px;
+  box-sizing: border-box;
+  color: $base-color-ondark;
+  background-color: $base-button-color;
+  padding: 0;
+  font-family: $button-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: $base-background-color;
+  color: $active-color;
+  border: 1px solid $active-color;
+}
+
+.button:focus {
+  background-color: $base-background-color;
+  color: $active-color;
+  outline: none;
+}
+
+.button:active {
+  background-color: $active-color;
+}
+
+.button:disabled {
+  background-color: #999999;
+}
