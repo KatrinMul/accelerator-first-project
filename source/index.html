@@ -15,15 +15,11 @@
 </head>
 
 <body class="page-body">
-  <!-- пример использования спрайта -->
-  <img src="/_spritemap#sprite-logo" alt="Это спрайт">
-  <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg>
-
   <header class="page-body__header header" data-test="header">
     <a class="header__link" href="#">
-      <img class="header__logo" src="/_spritemap#sprite-logo" alt="Логотип" width="142" height="42">
+      <svg class="header__logo" width="142" height="42" viewBox="0 0 142 42" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Походы в горы «Lifetour»">
+        <use href="/__spritemap#sprite-logotype"></use>
+      </svg>
     </a>
     <nav class="header__nav nav">
       <ul class="nav__list main-menu">
@@ -61,8 +57,8 @@
       <button class="nav__button" type="button">
         <span class="visually-hidden">Закрыть/открыть меню</span>
       </button>
+      <a class="nav__phone-link" href="tel:+78000000000">8 800 000-00-00</a>
     </nav>
-    <a class="header__phone" href="tel:+78000000000">8 800 000-00-00</a>
 
   </header>
 

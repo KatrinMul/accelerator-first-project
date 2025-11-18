@@ -32,8 +32,8 @@
 }
 
 .nav__button {
-  width: 60px;
-  height: 60px;
+  width: 26px;
+  height: 26px;
   border: none;
   cursor: pointer;
   display: none;
@@ -41,8 +41,7 @@
 
 .nav--opened .nav__button {
   display: block;
-  background: url("../../img/sprite/cross.svg") no-repeat center;
-  background-size: 16px;
+  background: url("../../__spritemap#sprite-cross") no-repeat center;
 
   @media (min-width: $desktop) {
     display: none;
@@ -51,16 +50,11 @@
 
 .nav--closed .nav__button {
   display: block;
-  background: url("../../img/sprite/menu.svg") no-repeat center;
-  background-size: 16px;
+  background: url("../../__spritemap#sprite-menu") no-repeat center;
 
   @media (min-width: $desktop) {
     display: none;
   }
-}
-
-.nav__button:active {
-  background-color: $base-color;
 }
 
 @media (min-width: $desktop) {
@@ -76,4 +70,13 @@
     background: none;
     gap: 20px;
   }
+}
+
+.nav__phone-link {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: $base-color-ondark;
 }
