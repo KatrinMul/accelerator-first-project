@@ -2,4 +2,18 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-@import "common/global";
+
+// Common
+// ---------------------------------
+@import "./common/mixins.scss";
+@import "./common/fonts.scss";
+@import "./common/variables.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
+
+// Blocks
+// ---------------------------------
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/swiper.scss";

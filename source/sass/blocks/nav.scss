@@ -1,0 +1,79 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    border: none;
+    position: relative;
+    justify-content: space-between;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $base-color;
+  list-style: none;
+}
+
+.nav--closed .nav__list {
+  display: none;
+}
+
+.nav--opened .nav__list {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.nav__button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.nav--opened .nav__button {
+  display: block;
+  background: url("../../img/sprite/cross.svg") no-repeat center;
+  background-size: 16px;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.nav--closed .nav__button {
+  display: block;
+  background: url("../../img/sprite/menu.svg") no-repeat center;
+  background-size: 16px;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.nav__button:active {
+  background-color: $base-color;
+}
+
+@media (min-width: $desktop) {
+  .nav__list,
+  .nav--closed .nav__list,
+  .nav--opened .nav__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: none;
+    position: relative;
+    top: 0;
+    background: none;
+    gap: 20px;
+  }
+}

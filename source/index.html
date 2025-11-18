@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifetour</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./fonts/montserrat-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <title>Lifetour</title>
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/_spritemap#sprite-logo" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
+<body class="page-body">
+  <!-- пример использования спрайта -->
+  <img src="/_spritemap#sprite-logo" alt="Это спрайт">
+  <svg>
+    <use href="/__spritemap#sprite-user"></use>
+  </svg>
 
-    <header class="header" data-test="header">
-      <a class="header__link" href="#">
-          <img class="header__logo" src="/_spritemap#sprite-logo" alt="Логотип" width="32" height="36">
-      </a>
-    <nav class="header__nav nav nav--closed">
-      <ul class="nav__list main-menu main-menu--index">
+  <header class="page-body__header header" data-test="header">
+    <a class="header__link" href="#">
+      <img class="header__logo" src="/_spritemap#sprite-logo" alt="Логотип" width="142" height="42">
+    </a>
+    <nav class="header__nav nav">
+      <ul class="nav__list main-menu">
         <li class="main-menu__item main-menu__item--current">
           <a class="main-menu__link " href="#">
-            <span class="main-menu__link-text">Главная</span>
+            <span class="main-menu__link-text">Туры</span>
           </a>
         </li>
         <li class="main-menu__item">
           <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">Каталог</span>
-          </a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">Доставка</span>
+            <span class="main-menu__link-text">Обучение</span>
           </a>
         </li>
         <li class="main-menu__item">
@@ -41,16 +42,19 @@
             <span class="main-menu__link-text">О нас</span>
           </a>
         </li>
-      </ul>
-      <ul class="nav__list-button nbutton">
-        <li class="nbutton__item">
-          <a class="nbutton__button nbutton__button--login" href="#">
-            <span class="nbutton__button-text">Войти</span>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">
+            <span class="main-menu__link-text">Отзывы</span>
           </a>
         </li>
-        <li class="nbutton__item">
-          <a class="nbutton__button nbutton__button--basket" href="#">
-            <span class="nbutton__button-text">Корзина</span>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">
+            <span class="main-menu__link-text">Фотографии</span>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="#">
+            <span class="main-menu__link-text">Контакты</span>
           </a>
         </li>
       </ul>
@@ -58,21 +62,69 @@
         <span class="visually-hidden">Закрыть/открыть меню</span>
       </button>
     </nav>
+    <a class="header__phone" href="tel:+78000000000">8 800 000-00-00</a>
 
   </header>
 
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  <main class="page-body__main main">
+    <section class="main__hero hero" data-test="hero">
+      <h1 class="visually-hidden">Направления туров</h1>
+      <div class="hero__swiper swiper">
+        <div class="swiper__wrapper swiper-wrapper">
+          <div class="swiper__slide swiper-slide swiper__slide--first">
+            <div class="swiper__slide-wrapper">
+              <h2>Захватывающие вершины Кавказа</h2>
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты
+                и совершите восход на вершину горы Чегет.</p>
+              <a href="#" class="swiper__link button"><span class="swiper__link-box">Смотреть тур</span></a>
+              <div class="swiper__box">
+                <span class="swiper__label">6 дней/5 ночей</span>
+                <span class="swiper__label">Высокая сложность</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper__slide swiper-slide swiper__slide--second">
+            <div class="swiper__slide-wrapper">
+              <h2>Невероятная природа Камчатки</h2>
+              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие
+                по одному из самых нетронутых уголков дикой природы в мире.</p>
+              <a href="#" class="swiper__link button"><span class="swiper__link-box">Смотреть тур</span></a>
+              <div class="swiper__box">
+                <span class="swiper__label">9 дней/10 ночей</span>
+                <span class="swiper__label">Средняя сложность</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper__slide swiper-slide swiper__slide--third">
+            <div class="swiper__slide-wrapper">
+              <h2>Магические пейзажи Алтайского Края</h2>
+              <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических
+                и захватывающих дух ландшафтов Алтайских гор.</p>
+              <a href="#" class="swiper__link button"><span class="swiper__link-box">Смотреть тур</span></a>
+              <div class="swiper__box">
+                <span class="swiper__label">8 дней/7 ночей</span>
+                <span class="swiper__label">Легкая сложность</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper__pagination swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- примеры требуемых атрибутов data-test="*" -->
+  <div data-test="header">header</div>
+  <div data-test="hero">hero</div>
+  <div data-test="tours">tours</div>
+  <div data-test="training">training</div>
+  <div data-test="about">about</div>
+  <div data-test="reviews">reviews</div>
+  <div data-test="adv">adv</div>
+  <div data-test="gallery">gallery</div>
+  <div data-test="form">form</div>
+  <div data-test="footer">footer</div>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>

@@ -1,0 +1,111 @@
+.swiper__slide {
+  min-height: 568px;
+  padding: 40px 15px;
+  background-color: $additional-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  &--first {
+    background-image: url(../../img/slide-background-1.webp);
+  }
+
+  &--second {
+    background-image: url(../../img/slide-background-2.webp);
+  }
+
+  &--third {
+    background-image: url(../../img/slide-background-3.webp);
+  }
+}
+
+.swiper__slide-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 290px;
+
+  @media (min-width: $tablet) {
+    max-width: 678px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1200px;
+  }
+}
+
+.swiper__slide h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  color: $base-color-ondark;
+}
+
+.swiper__slide p {
+  margin: 0 0 60px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $base-color-ondark;
+}
+
+.swiper__link {
+  margin: 0 auto;
+  display: flex;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $base-color-ondark;
+}
+
+.swiper__label {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+}
+
+.swiper__pagination {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 56px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.swiper__pagination .swiper-pagination-bullet {
+  display: block;
+  background: transparent;
+  border: 1px solid $base-color-ondark;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper__pagination .swiper-pagination-bullet-active {
+  background: $base-color-ondark;
+}
+
+.swiper__pagination .swiper-pagination-bullet:hover {
+  background: #d9d9d9;
+}
+
+.swiper__pagination .swiper-pagination-bullet:focus {
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 1px;
+}
+
+.swiper__pagination .swiper-pagination-bullet:active {
+  background: rgba(255, 255, 255, 0.5);
+}
