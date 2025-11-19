@@ -16,48 +16,51 @@
 
 <body class="page-body">
   <header class="page-body__header header" data-test="header">
-    <a class="header__link" href="#">
-      <svg class="header__logo" width="142" height="42" viewBox="0 0 142 42" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Походы в горы «Lifetour»">
-        <use href="/__spritemap#sprite-logotype"></use>
-      </svg>
-    </a>
     <nav class="header__nav nav">
-      <ul class="nav__list main-menu">
-        <li class="main-menu__item main-menu__item--current">
-          <a class="main-menu__link " href="#">
-            <span class="main-menu__link-text">Туры</span>
-          </a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">Обучение</span>
-          </a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">О нас</span>
-          </a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">Отзывы</span>
-          </a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">Фотографии</span>
-          </a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="#">
-            <span class="main-menu__link-text">Контакты</span>
-          </a>
-        </li>
-      </ul>
       <button class="nav__button" type="button">
         <span class="visually-hidden">Закрыть/открыть меню</span>
       </button>
-      <a class="nav__phone-link" href="tel:+78000000000">8 800 000-00-00</a>
+      <div class="nav__wrapper">
+        <a class="nav__main-link" href="#">
+          <svg class="nav__logo" width="142" height="42" viewBox="0 0 142 42" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Походы в горы «Lifetour»">
+            <use href="/__spritemap#sprite-logotype"></use>
+          </svg>
+        </a>
+        <ul class="nav__list main-menu">
+          <li class="main-menu__item main-menu__item--current">
+            <a class="main-menu__link" href="#">
+              <span class="main-menu__link-text">Туры</span>
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">
+              <span class="main-menu__link-text">Обучение</span>
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">
+              <span class="main-menu__link-text">О нас</span>
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">
+              <span class="main-menu__link-text">Отзывы</span>
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">
+              <span class="main-menu__link-text">Фотографии</span>
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">
+              <span class="main-menu__link-text">Контакты</span>
+            </a>
+          </li>
+        </ul>
+        <a class="nav__phone-link" href="tel:+78000000000">8 800 000-00-00</a>
+      </div>
     </nav>
 
   </header>
@@ -83,8 +86,9 @@
             <div class="swiper__slide-wrapper">
               <h2>Невероятная природа Камчатки</h2>
               <p>Незабываемое приключение, во время которого вы отправитесь в путешествие
-                по одному из самых нетронутых уголков дикой природы в мире.</p>
+                по одному из самых нетронутых уголков дикой природы&nbsp;в мире.</p>
               <a href="#" class="swiper__link button"><span class="swiper__link-box">Смотреть тур</span></a>
+
               <div class="swiper__box">
                 <span class="swiper__label">9 дней/10 ночей</span>
                 <span class="swiper__label">Средняя сложность</span>

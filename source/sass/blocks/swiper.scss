@@ -18,13 +18,22 @@
   &--third {
     background-image: url(../../img/slide-background-3.webp);
   }
+
+  @media (min-width: $tablet) {
+    min-height: 1034px;
+    padding: 30px 45px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 200px 120px 80px;
+    min-height: 800px;
+  }
 }
 
 .swiper__slide-wrapper {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   max-width: 290px;
 
   @media (min-width: $tablet) {
@@ -32,6 +41,7 @@
   }
 
   @media (min-width: $desktop) {
+    text-align: left;
     max-width: 1200px;
   }
 }
@@ -43,15 +53,35 @@
   font-size: 26px;
   line-height: 26px;
   color: $base-color-ondark;
+
+  @media (min-width: $tablet) {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 77px;
+    line-height: 77px;
+  }
 }
 
 .swiper__slide p {
-  margin: 0 0 60px;
+  margin: 0 auto 60px;
   padding: 0;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   color: $base-color-ondark;
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+    line-height: 24px;
+    max-width: 500px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 420px;
+  }
 }
 
 .swiper__link {
@@ -76,11 +106,15 @@
   position: absolute;
   z-index: 2;
   left: 50%;
-  bottom: 56px;
+  bottom: 40px;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   gap: 20px;
+
+  @media (min-width: $desktop) {
+    bottom: 92px;
+  }
 }
 
 .swiper__pagination .swiper-pagination-bullet {

@@ -1,19 +1,63 @@
 .nav {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
 
   @media (min-width: $tablet) {
-    border: none;
-    position: relative;
-    justify-content: space-between;
+    align-items: center;
   }
+
+  @media (min-width: $desktop) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: end;
+
+  @media (min-width: $tablet) {
+    width: calc(50vw + 68px);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
+
+}
+
+.nav__main-link {
+  display: block;
+  height: 42px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.nav__main-link:hover {
+  opacity: 0.8;
+}
+
+.nav__main-link:focus {
+  opacity: 0.8;
+}
+
+.nav__main-link:active {
+  opacity: 0.6;
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
-  border-top: 1px solid $base-color;
   list-style: none;
 }
 
@@ -22,13 +66,43 @@
 }
 
 .nav--opened .nav__list {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 30px 15px 50px;
   width: 100%;
   position: absolute;
-  top: 60px;
+  top: 100px;
   left: 0;
-  background-color: #ffffff;
+  background-color: $additional-color;
   z-index: 5;
+
+  @media (min-width: $tablet) {
+    top: 82px;
+    gap: 26px;
+  }
+}
+
+.main-menu__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: $base-color-ondark;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
 }
 
 .nav__button {
@@ -41,7 +115,11 @@
 
 .nav--opened .nav__button {
   display: block;
-  background: url("../../__spritemap#sprite-cross") no-repeat center;
+  background-color: #ffffff;
+  mask-image: url("/__spritemap#sprite-cross-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 
   @media (min-width: $desktop) {
     display: none;
@@ -50,7 +128,11 @@
 
 .nav--closed .nav__button {
   display: block;
-  background: url("../../__spritemap#sprite-menu") no-repeat center;
+  background-color: #ffffff;
+  mask-image: url("/__spritemap#sprite-menu-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 
   @media (min-width: $desktop) {
     display: none;
@@ -61,14 +143,15 @@
   .nav__list,
   .nav--closed .nav__list,
   .nav--opened .nav__list {
-    display: flex;
+    width: auto;
+    padding: 0 40px;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: none;
     position: relative;
     top: 0;
     background: none;
-    gap: 20px;
+    gap: 30px;
   }
 }
 
@@ -79,4 +162,9 @@
   font-size: 14px;
   line-height: 14px;
   color: $base-color-ondark;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
