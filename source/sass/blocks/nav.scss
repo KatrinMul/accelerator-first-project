@@ -143,6 +143,7 @@
   .nav__list,
   .nav--closed .nav__list,
   .nav--opened .nav__list {
+    display: flex;
     width: auto;
     padding: 0 40px;
     flex-direction: row;
