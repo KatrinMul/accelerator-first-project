@@ -7,16 +7,16 @@
   background-size: cover;
   text-align: center;
 
-  &--first {
-    background-image: url(../../img/slide-background-1.webp);
+  &--caucasus {
+    background-image: url(../../img/slide-background-caucasus.webp);
   }
 
-  &--second {
-    background-image: url(../../img/slide-background-2.webp);
+  &--kamchatka {
+    background-image: url(../../img/slide-background-kamchatka.webp);
   }
 
-  &--third {
-    background-image: url(../../img/slide-background-3.webp);
+  &--altai {
+    background-image: url(../../img/slide-background-altai.webp);
   }
 
   @media (min-width: $tablet) {
