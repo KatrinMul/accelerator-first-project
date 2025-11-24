@@ -42,3 +42,45 @@
 .button:disabled {
   background-color: #999999;
 }
+
+.title {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  padding-top: 16px;
+  margin: 0;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    min-width: 542px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+.title-double {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  opacity: 0.03;
+
+  @media (min-width: $tablet) {
+    font-size: 40px;
+    line-height: 40px;
+    bottom: 4px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 55px;
+    line-height: 55px;
+    bottom: -1px;
+  }
+}

@@ -1,0 +1,75 @@
+.instructor__wrapper {
+  margin: 0 auto;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  padding: 15px;
+  min-height: 365px;
+  max-width: 290px;
+
+  @media (min-width: $tablet) {
+    min-height: 388px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 365px;
+  }
+}
+
+.instructor__photo {
+  display: block;
+  margin: 0 auto 15px;
+  width: 260;
+  height: 200;
+  object-fit: cover;
+
+  @media (min-width: $tablet) {
+    width: 183px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 255px;
+  }
+}
+
+.instructor__box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.instructor h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.instructor__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+  position: relative;
+}
+
+.instructor__link::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 14px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $base-color;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  mask-image: url("/__spritemap#sprite-vk-icon-view");
+}
+
+.instructor p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}

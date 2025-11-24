@@ -125,12 +125,20 @@
       </div>
     </section>
     <section class="main__tours tours" data-test="tours">
-      <h2 class="tours__title">Ближайшие туры<span class="tours__title-duoble" aria-hidden="true">Ближайшие туры</span></h2>
-      <div class="tours__swiper swiper">
+      <div class="tours__header">
+        <h2 class="tours__title title">Ближайшие туры<span class="tours__title-double title-double"
+            aria-hidden="true">Ближайшие
+            туры</span></h2>
         <div class="tours__swiper-navigation">
-          <div class="tours__swiper-button swiper-button-next tours__swiper-button--next"></div>
-          <div class="tours__swiper-button swiper-button-prev tours__swiper-button--prev"></div>
+          <button class="tours__swiper-button tours__swiper-button--prev swiper-button swiper-button--prev"
+            disabled><span class="visually-hidden">Слайд
+              назад</span></button>
+          <button class="tours__swiper-button tours__swiper-button--next swiper-button swiper-button--next"><span
+              class="visually-hidden">Слайд
+              вперед</span></button>
         </div>
+      </div>
+      <div class="tours__swiper swiper">
         <div class="tours__swiper-wrapper swiper-wrapper">
           <div class="tours__swiper-slide swiper-slide tours__swiper-slide--caucasus">
             <div class="tours__slide-container">
@@ -144,7 +152,8 @@
               <h3 class="tours__slide-title">Путешествие вокруг Эльбруса</h3>
               <span class="tours__slide-separator"></span>
               <div class="tours__slide-marks">
-                <span class="tours__slide-mark">Сложность:<span class="tours__slide-stars tours__slide-stars--four"></span></span>
+                <span class="tours__slide-mark">Сложность:<span
+                    class="tours__slide-stars tours__slide-stars--four"></span></span>
                 <span class="tours__slide-mark">Даты набора:<span class="tours__slide-info">12.06–19.06</span></span>
                 <span class="tours__slide-mark">Группа:<span class="tours__slide-info">до 15 чел.</span></span>
               </div>
@@ -162,7 +171,8 @@
               <h3 class="tours__slide-title">Путь к подножию Белухи</h3>
               <span class="tours__slide-separator"></span>
               <div class="tours__slide-marks">
-                <span class="tours__slide-mark">Сложность:<span class="tours__slide-stars tours__slide-stars--four"></span></span>
+                <span class="tours__slide-mark">Сложность:<span
+                    class="tours__slide-stars tours__slide-stars--four"></span></span>
                 <span class="tours__slide-mark">Даты набора:<span class="tours__slide-info">14.06–23.06</span></span>
                 <span class="tours__slide-mark">Группа:<span class="tours__slide-info">до 25 чел.</span></span>
               </div>
@@ -180,7 +190,8 @@
               <h3 class="tours__slide-title">Через Фишт к Чёрному морю и обратно</h3>
               <span class="tours__slide-separator"></span>
               <div class="tours__slide-marks">
-                <span class="tours__slide-mark">Сложность:<span class="tours__slide-stars tours__slide-stars--four"></span></span>
+                <span class="tours__slide-mark">Сложность:<span
+                    class="tours__slide-stars tours__slide-stars--four"></span></span>
                 <span class="tours__slide-mark">Даты набора:<span class="tours__slide-info">15.07–19.07</span></span>
                 <span class="tours__slide-mark">Группа:<span class="tours__slide-info">до 22 чел.</span></span>
               </div>
@@ -198,7 +209,8 @@
               <h3 class="tours__slide-title">Восхождение Манарага</h3>
               <span class="tours__slide-separator"></span>
               <div class="tours__slide-marks">
-                <span class="tours__slide-mark">Сложность:<span class="tours__slide-stars tours__slide-stars--five"></span></span>
+                <span class="tours__slide-mark">Сложность:<span
+                    class="tours__slide-stars tours__slide-stars--five"></span></span>
                 <span class="tours__slide-mark">Даты набора:<span class="tours__slide-info">12.07–19.07</span></span>
                 <span class="tours__slide-mark">Группа:<span class="tours__slide-info">до 7 чел.</span></span>
               </div>
@@ -208,11 +220,121 @@
       </div>
       <a class="tours__link" href="#">Показать все туры</a>
     </section>
+    <section class="main__training training" data-test="training">
+      <h2 class="training__title title">Обучение<span class="training__title-double title-double"
+          aria-hidden="true">Обучение</span></h2>
+      <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых десятки
+        пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+      <div class="training__swiper-header">
+        <h3 class="training__swiper-title">Наши инструкторы</h3>
+        <div class="training__swiper-navigation">
+          <button class="training__swiper-button training__swiper-button--prev swiper-button swiper-button--prev"
+            disabled><span class="visually-hidden">Слайд
+              назад</span></button>
+          <button class="training__swiper-button training__swiper-button--next swiper-button swiper-button--next"><span
+              class="visually-hidden">Слайд
+              вперед</span></button>
+        </div>
+      </div>
+      <div class="training__swiper swiper">
+        <div class="training__swiper-wrapper swiper-wrapper">
+          <div class="training__swiper-slide swiper-slide instructor">
+            <div class="instructor__wrapper">
+              <picture>
+                <img class="instructor__photo" src="img/instructor-1.jpg" alt="Фотография Александра Прокофьева"
+                  width="260" height="200">
+              </picture>
+              <div class="instructor__box">
+                <h4>Александр<br>Прокофьев</h4>
+                <a class="instructor__link" href="#"><span class="visually-hidden">Страничка ВКонтакте</span></a>
+              </div>
+              <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+            </div>
+          </div>
+          <div class="training__swiper-slide swiper-slide instructor">
+            <div class="instructor__wrapper">
+              <picture>
+                <img class="instructor__photo" src="img/instructor-2.jpg" alt="Фотография Светланы Афиногеновой"
+                  width="260" height="200">
+              </picture>
+              <div class="instructor__box">
+                <h4>Светлана<br>Афиногенова</h4>
+                <a class="instructor__link" href="#"><span class="visually-hidden">Страничка ВКонтакте</span></a>
+              </div>
+              <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать —
+                в этом
+                назначение жизни.</p>
+            </div>
+          </div>
+          <div class="training__swiper-slide swiper-slide instructor">
+            <div class="instructor__wrapper">
+              <picture>
+                <img class="instructor__photo" src="img/instructor-3.jpg" alt="Фотография Надежды Колесниченко"
+                  width="260" height="200">
+              </picture>
+              <div class="instructor__box">
+                <h4>Надежда<br>Колесниченко</h4>
+                <a class="instructor__link" href="#"><span class="visually-hidden">Страничка ВКонтакте</span></a>
+              </div>
+              <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя
+                спокойно и уверенно.</p>
+            </div>
+          </div>
+          <div class="training__swiper-slide swiper-slide instructor">
+            <div class="instructor__wrapper">
+              <picture>
+                <img class="instructor__photo" src="img/instructor-4.jpg" alt="Фотография Федора Кайгородова"
+                  width="260" height="200">
+              </picture>
+              <div class="instructor__box">
+                <h4>Федор<br>Кайгородов</h4>
+                <a class="instructor__link" href="#"><span class="visually-hidden">Страничка ВКонтакте</span></a>
+              </div>
+              <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много
+                путешествует по Европе.</p>
+            </div>
+          </div>
+          <div class="training__swiper-slide swiper-slide instructor">
+            <div class="instructor__wrapper">
+              <picture>
+                <img class="instructor__photo" src="img/instructor-5.jpg" alt="Фотография Даниэля Васнецова" width="260"
+                  height="200">
+              </picture>
+              <div class="instructor__box">
+                <h4>Даниэль<br>Васнецов</h4>
+                <a class="instructor__link" href="#"><span class="visually-hidden">Страничка ВКонтакте</span></a>
+              </div>
+              <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article class="training__process">
+        <h3 class="training__process-title">Процесс обучения</h3>
+        <ul class="training__process-list">
+          <div class="training__process-group">
+            <li class="training__process-item training__process-item--map">
+              <p class="training__process-description">Изучение спортивного туристского движения</p>
+            </li>
+            <li class="training__process-item training__process-item--boots">
+              <p class="training__process-description">Подготовка и техническое снаряжение в походах</p>
+            </li>
+          </div>
+          <div class="training__process-group">
+            <li class="training__process-item training__process-item--tree">
+              <p class="training__process-description">Лекции по окружающей среде, экологии и гигиене</p>
+            </li>
+            <li class="training__process-item training__process-item--mountain">
+              <p class="training__process-description">Разъяснение сложности горных препятствий</p>
+            </li>
+          </div>
+        </ul>
+      </article>
+    </section>
   </main>
 
   <!-- примеры требуемых атрибутов data-test="*" -->
-
-  <div data-test="training">training</div>
+  <!--  <img src="/__spritemap#sprite-logo-view" width="410" height="1000" alt="Это спрайт"> -->
   <div data-test="about">about</div>
   <div data-test="reviews">reviews</div>
   <div data-test="adv">adv</div>

@@ -235,3 +235,60 @@
     transform: translate(-25px, -40%) rotate(20deg);
   }
 }
+
+.swiper-button {
+  display: block;
+  width: 37px;
+  height: 35px;
+  background-color: $additional-color;
+  position: relative;
+  border: none;
+  cursor: pointer;
+
+  &--next {
+    transform: scaleX(-1);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 9px;
+    background-color: #ffffff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.swiper-button:hover {
+  background-color: transparent;
+  border: 1px solid $active-color;
+
+  &::after {
+    background-color: $active-color;
+  }
+}
+
+.swiper-button:focus {
+  background-color: #ffffff;
+
+  &::after {
+    background-color: $active-color;
+  }
+}
+
+.swiper-button:active {
+  background-color: $active-color;
+}
+
+.swiper-button:disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: $disabled-color;
+}
