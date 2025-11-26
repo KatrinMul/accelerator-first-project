@@ -67,6 +67,27 @@
   mask-image: url("/__spritemap#sprite-vk-icon-view");
 }
 
+.instructor__link:hover {
+  border-color: $base-color;
+}
+.instructor__link:focus {
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+}
+.instructor__link:active {
+  background-color: $additional-color;
+  border: none;
+
+  &::before {
+    background-color: $base-color-ondark;
+  }
+}
+.instructor__link:disabled {
+  border-color: $base-color;
+  opacity: 0.3;
+}
+
 .instructor p {
   margin: 0;
   font-weight: 400;

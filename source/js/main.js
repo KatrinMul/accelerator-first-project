@@ -14,14 +14,42 @@ navButton.addEventListener('click', () => {
 });
 
 
-new Swiper('.hero__swiper', {
+const heroSwiper = new Swiper('.hero__swiper', {
   modules: [Pagination],
+  slidesPerView: 1,
   loop: true,
   speed: 1500,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  a11y: {
+    enabled: true,
+    slideLinkClass: 'swiper__link',
+    scrollOnFocus: false,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
+
+const swiperContainer = document.querySelector('.hero__swiper');
+
+swiperContainer.addEventListener('focusin', (event) => {
+  const focusedSlide = event.target.closest('.swiper-slide');
+
+  if (focusedSlide) {
+    const realIndex = parseInt(focusedSlide.dataset.swiperSlideIndex, 10);
+
+    if (realIndex !== heroSwiper.realIndex) {
+      heroSwiper.slideToLoop(realIndex, 0);
+    }
+  }
+});
+
+heroSwiper.on('init', () => {
+  heroSwiper.slideToLoop(0, 0);
 });
 
 new Swiper('.tours__swiper', {

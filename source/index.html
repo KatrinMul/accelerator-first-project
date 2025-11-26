@@ -331,7 +331,82 @@
         </ul>
       </article>
     </section>
+    <section class="main__contacts contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title title">Контакты<span class="training__title-double title-double"
+            aria-hidden="true">Контакты</span></h2>
+        <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
+          увлекательными историями и подобрать для вас тур.</p>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--phone">
+            <span class="contacts__type">Телефон</span>
+            <a class="contacts__link" href="tel:+79837454545">+7 983 745-45-45</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <span class="contacts__type">Email</span>
+            <a class="contacts__link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <span class="contacts__type">Адрес</span>
+            <span class="contacts__address">г. Москва, пр-т Мира, д. 14, офис 101</span>
+          </li>
+        </ul>
+      </div>
+      <picture>
+        <source media="(min-width:1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop.jpg 2x" type="image/jpeg" width="600" height="324">
+        <source media="(min-width:768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet.jpg 2x" type="image/jpeg" width="768" height="340">
+        <img class="contacts__map" src="img/map-mobile.jpg" srcset="img/map-mobile.jpg 2x" alt="Расположение на карте" width="320" height="343">
+      </picture>
+    </section>
   </main>
+
+  <footer class="page-body__footer footer" data-test="footer">
+    <div class="footer__wrapper">
+      <a class="footer__main-link" href="#">
+        <svg class="footer__logo" width="142" height="42" viewBox="0 0 142 42" xmlns="http://www.w3.org/2000/svg"
+          role="img" aria-label="Походы в горы «Lifetour»">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+      </a>
+      <ul class="footer__list">
+        <div class="footer__list-group">
+          <li class="footer__item">
+            <a class="footer__link" href="">Туры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Обучение</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">О нас</a>
+          </li>
+        </div>
+        <div class="footer__list-group">
+          <li class="footer__item">
+            <a class="footer__link" href="">Отзывы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Фотографии</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Контакты</a>
+          </li>
+        </div>
+      </ul>
+      <a class="footer__phone-link" href="tel:+78007253232">8 800 725-32-32</a>
+    </div>
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--vk" href=""><span class="visually-hidden">Ссылка Вконтакте</span></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--ok" href=""><span class="visually-hidden">Ссылка Однокласники</span></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--reddit" href=""><span class="visually-hidden">Ссылка Reddit</span></a>
+      </li>
+    </ul>
+    <a class="footer__link footer__link--policy" href="#">Политика конфиденциальности</a>
+  </footer>
 
   <!-- примеры требуемых атрибутов data-test="*" -->
   <!--  <img src="/__spritemap#sprite-logo-view" width="410" height="1000" alt="Это спрайт"> -->
@@ -340,7 +415,6 @@
   <div data-test="adv">adv</div>
   <div data-test="gallery">gallery</div>
   <div data-test="form">form</div>
-  <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>
 </body>
 
