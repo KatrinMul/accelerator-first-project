@@ -86,46 +86,6 @@
   }
 }
 
-.main-menu__link {
-  display: block;
-  padding: 3px 5px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.04em;
-  color: $base-color-ondark;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  @media (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  @media (min-width: $desktop) {
-    font-weight: 400;
-    letter-spacing: 0;
-    text-transform: none;
-  }
-}
-
-.main-menu__link:hover {
-  border-bottom: 1px solid $base-color-ondark;
-}
-
-.main-menu__link:focus {
-  outline: 1px solid $base-color-ondark;
-  outline-offset: 2px;
-}
-
-.main-menu__link:active {
-  color: $active-color;
-}
-
-.main-menu__link:disabled {
-  color: $disabled-color;
-}
-
 .nav__button {
   width: 26px;
   height: 26px;
@@ -188,6 +148,10 @@
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 157px;
   }
 }
 

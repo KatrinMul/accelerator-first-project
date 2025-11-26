@@ -1,0 +1,45 @@
+.menu__link {
+  display: block;
+  padding: 3px 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: $base-color-ondark;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+.menu__link:hover {
+  border-bottom: 1px solid $base-color-ondark;
+}
+
+.menu__link:focus {
+  outline: none;
+}
+
+.menu__link:focus-visible {
+  outline: 1px solid $base-color-ondark;
+  outline-offset: 2px;
+}
+
+.menu__link:active {
+  border: none;
+  outline: none;
+  color: $active-color;
+}
+
+.menu__link:disabled {
+  color: $disabled-color;
+}

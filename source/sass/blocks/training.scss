@@ -113,11 +113,19 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 104px;
+    column-gap: 174px;
+    grid-template-areas:
+        "item1 item4"
+        "item2 item3";
+
   }
 
   @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     gap: 0;
   }
@@ -128,7 +136,7 @@
   position: absolute;
   content: "";
   width: 2px;
-  height: 183px;
+  height: calc(100% - 40px);
   background-color: $additional-color;
   top: 50%;
   left: 6px;
@@ -145,31 +153,6 @@
     top: calc(100% + 7px);
     left: 27px;
     transform: none;
-  }
-}
-
-.training__process-group {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-
-  @media (min-width: $tablet) {
-    gap: 104px;
-  }
-
-  @media (min-width: $desktop) {
-    flex-direction: row;
-    gap: 0;
-  }
-}
-
-.training__process-group:nth-child(2) {
-  @media (min-width: $tablet) {
-    flex-direction: column-reverse;
-  }
-
-  @media (min-width: $desktop) {
-    flex-direction: row;
   }
 }
 
@@ -200,6 +183,30 @@
     top: calc(100% + 7px);
     left: 27px;
     transform: translateY(-50%);
+  }
+}
+
+.training__process-item:nth-child(1) {
+  @media (min-width: $tablet) {
+    grid-area: item1;
+  }
+}
+
+.training__process-item:nth-child(2) {
+  @media (min-width: $tablet) {
+    grid-area: item2;
+  }
+}
+
+.training__process-item:nth-child(3) {
+  @media (min-width: $tablet) {
+    grid-area: item3;
+  }
+}
+
+.training__process-item:nth-child(4) {
+  @media (min-width: $tablet) {
+    grid-area: item4;
   }
 }
 
