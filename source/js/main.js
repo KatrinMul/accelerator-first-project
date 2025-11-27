@@ -116,3 +116,64 @@ new Swiper('.reviews__swiper', {
     },
   },
 });
+
+
+const inputs = document.querySelectorAll('.request__input');
+
+inputs.forEach((input) => {
+  input.setAttribute('data-error-message', 'error');
+});
+
+function validateAndSetPlaceholder(input) {
+  const defaultValue = input.getAttribute('data-placeholder-default');
+  const errorMessage = input.getAttribute('data-error-message');
+  let isValid = true;
+
+  if (input.value.trim() === '' && input.required) {
+    isValid = false;
+  } else if (input.type === 'email') {
+    const emailPattern = /\S+@\S+\.\S+/;
+    if (!emailPattern.test(input.value)) {
+      isValid = false;
+    }
+  } else if (input.type === 'tel') {
+    const phonePattern = /^\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}$/;
+    if (!phonePattern.test(input.value)) {
+      isValid = false;
+    }
+  }
+
+  if (!isValid && input.value.trim() !== '') {
+    input.classList.add('error');
+    input.value = '';
+    input.placeholder = errorMessage;
+
+  } else if (input.value.trim() === '') {
+    input.classList.remove('error');
+    input.placeholder = defaultValue;
+
+  } else {
+    input.classList.remove('error');
+  }
+
+  return isValid;
+}
+
+inputs.forEach((input) => {
+  input.addEventListener('focus', function () {
+    this.classList.remove('error');
+    if (this.value === '') {
+      this.placeholder = this.getAttribute('data-placeholder-focus');
+    }
+  });
+
+  input.addEventListener('blur', function () {
+    validateAndSetPlaceholder(this);
+  });
+
+  input.addEventListener('input', function () {
+    if (this.classList.contains('error')) {
+      this.classList.remove('error');
+    }
+  });
+});

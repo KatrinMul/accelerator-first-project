@@ -1,0 +1,141 @@
+.request {
+  background: $additional-color url(../../img/form-background.webp);
+  background-size: cover;
+  background-position: 60% 50%;
+  min-height: 638px;
+
+  @media (min-width: $tablet) {
+    min-height: 680px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.request__wrapper {
+  padding: 174px 31px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 320px;
+
+  @media (min-width: $tablet) {
+    padding: 174px 204px;
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 174px 40px;
+    max-width: 1440px;
+  }
+}
+
+.request h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  color: $base-color-ondark;
+
+  @media (min-width: $tablet) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+.request p {
+  margin: 0;
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $base-color-ondark;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.request__form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: $tablet) {
+    gap: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.request__input {
+  border: 1px solid rgba(2, 102, 193,0.1);
+  border-radius: 2px;
+  width: 258px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: $base-color-ondark;
+  padding: 17px 15px;
+  color: rgba(45, 56, 63, 0.5);
+
+  @media (min-width: $tablet) {
+    width: 360px;
+    height: 56px;
+  }
+}
+
+.request__input:hover {
+  border-color: $additional-color;
+}
+
+.request__input:focus {
+  border-color: $base-color;
+  color: $base-color;
+  outline: none;
+}
+
+.request__input:active {}
+
+.request__input:disabled {
+  border-color: $disabled-color;
+  color: rgba(153, 153, 153, 0.5);
+}
+
+.request__input.error {
+    border-color: #ff121f;
+}
+
+
+.request__button {
+  width: 258px;
+  height: 50px;
+
+  @media (min-width: $tablet) {
+    width: 360px;
+    height: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 180px;
+  }
+}
