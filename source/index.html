@@ -349,7 +349,88 @@
         </ul>
       </div>
     </section>
-
+    <section class="main__reviews reviews" data-test="reviews">
+      <div class="reviews__swiper-header">
+        <h2 class="reviews__title title">Отзывы<span class="reviews__title-double title-double">Отзывы</span></h2>
+        <div class="reviews__swiper-navigation">
+          <button class="reviews__swiper-button reviews__swiper-button--prev swiper-button swiper-button--prev"
+            disabled><span class="visually-hidden">Слайд назад</span></button>
+          <button class="reviews__swiper-button reviews__swiper-button--next swiper-button swiper-button--next"><span
+              class="visually-hidden">Слайд вперед</span></button>
+        </div>
+      </div>
+      <div class="reviews__swiper swiper">
+        <div class="reviews__swiper-wrapper swiper-wrapper">
+          <div class="reviews__swiper-slide swiper-slide">
+            <div class="reviews__wrapper">
+              <picture>
+                <img class="reviews__photo" src="img/review-photo-1.jpg" alt="Фотография к отзыву Фролова Александра"
+                  width="250" height="169">
+              </picture>
+              <div class="reviews__box">
+                <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты,
+                  всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+                <p>С уверенностью могу
+                  сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем
+                  очень рекомендую!</p>
+                <span class="reviews__name">Фролов Александр</span>
+                <span class="reviews__details">38 лет, Москва</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__swiper-slide swiper-slide">
+            <div class="reviews__wrapper">
+              <picture>
+                <img class="reviews__photo" src="img/review-photo-2.jpg" alt="Фотография к отзыву Ивана Соловьёва"
+                  width="250" height="169">
+              </picture>
+              <div class="reviews__box">
+                <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли
+                  мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно!
+                </p>
+                <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую
+                  этот тур.</p>
+                <span class="reviews__name">Иван Соловьёв</span>
+                <span class="reviews__details">25 лет, Владивосток</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__swiper-slide swiper-slide">
+            <div class="reviews__wrapper">
+              <picture>
+                <img class="reviews__photo" src="img/review-photo-3.jpg" alt="Фотография к отзыву Евгении Баженовой"
+                  width="250" height="169">
+              </picture>
+              <div class="reviews__box">
+                <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала
+                  на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче,
+                  чем ожидала, видимо организм уже привык.</p>
+                <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+                <span class="reviews__name">Евгения Баженова</span>
+                <span class="reviews__details">23 года, Кострома</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__swiper-slide swiper-slide">
+            <div class="reviews__wrapper">
+              <picture>
+                <img class="reviews__photo" src="img/review-photo-4.jpg" alt="Фотография к отзыву Елены Пироговой"
+                  width="250" height="169">
+              </picture>
+              <div class="reviews__box">
+                <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда
+                  наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
+                <p>У нас собралась потрясающая
+                  команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно
+                  повторю такое приключение!</p>
+                <span class="reviews__name">Елена Пирогова</span>
+                <span class="reviews__details">37 лет, Тюмень</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-body__footer footer" data-test="footer">
@@ -383,52 +464,53 @@
           width="320" height="343">
       </picture>
     </section>
-    <div class="footer__wrapper">
-      <a class="footer__main-link" href="#">
-        <svg class="footer__logo" width="142" height="42" viewBox="0 0 142 42" xmlns="http://www.w3.org/2000/svg"
-          role="img" aria-label="Походы в горы «Lifetour»">
-          <use href="/__spritemap#sprite-logo"></use>
-        </svg>
-      </a>
-      <ul class="footer__list">
-        <li class="footer__item">
-          <a class="footer__link" href="">Туры</a>
+    <div class="footer__container">
+      <div class="footer__wrapper">
+        <a class="footer__main-link" href="#">
+          <svg class="footer__logo" width="142" height="42" viewBox="0 0 142 42" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Походы в горы «Lifetour»">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="">Туры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Обучение</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">О нас</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Отзывы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Фотографии</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">Контакты</a>
+          </li>
+        </ul>
+        <a class="footer__phone-link" href="tel:+78007253232">8 800 725-32-32</a>
+      </div>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href=""><span class="visually-hidden">Ссылка Вконтакте</span></a>
         </li>
-        <li class="footer__item">
-          <a class="footer__link" href="">Обучение</a>
+        <li class="social__item">
+          <a class="social__link social__link--ok" href=""><span class="visually-hidden">Ссылка Однокласники</span></a>
         </li>
-        <li class="footer__item">
-          <a class="footer__link" href="">О нас</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="">Отзывы</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="">Фотографии</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="">Контакты</a>
+        <li class="social__item">
+          <a class="social__link social__link--reddit" href=""><span class="visually-hidden">Ссылка Reddit</span></a>
         </li>
       </ul>
-      <a class="footer__phone-link" href="tel:+78007253232">8 800 725-32-32</a>
+      <a class="footer__link footer__link--policy" href="#">Политика конфиденциальности</a>
     </div>
-    <ul class="footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href=""><span class="visually-hidden">Ссылка Вконтакте</span></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--ok" href=""><span class="visually-hidden">Ссылка Однокласники</span></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--reddit" href=""><span class="visually-hidden">Ссылка Reddit</span></a>
-      </li>
-    </ul>
-    <a class="footer__link footer__link--policy" href="#">Политика конфиденциальности</a>
   </footer>
 
   <!-- примеры требуемых атрибутов data-test="*" -->
   <!--  <img src="/__spritemap#sprite-logo-view" width="410" height="1000" alt="Это спрайт"> -->
-  <div data-test="about">about</div>
   <div data-test="reviews">reviews</div>
   <div data-test="adv">adv</div>
   <div data-test="gallery">gallery</div>

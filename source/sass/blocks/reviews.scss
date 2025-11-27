@@ -1,0 +1,138 @@
+.reviews {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 320px;
+
+  @media (min-width: $tablet) {
+    max-width: none;
+  }
+
+  @media (min-width: $desktop) {}
+}
+
+.reviews__swiper-header {
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 25px;
+    padding: 20px 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 30px;
+    padding: 100px 120px;
+  }
+}
+
+.reviews__swiper-navigation {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 4px;
+    top: -50px;
+    right: 0;
+  }
+}
+
+.reviews__swiper-wrapper{
+  @media (min-width: $tablet) {
+    margin-left: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 115px;
+  }
+}
+
+.reviews__swiper-slide.swiper-slide {
+  @media (min-width: $tablet) {
+    width: 595px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
+}
+
+.reviews__wrapper {
+  margin: 15px;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 0px 20px rgba(28, 51, 116, 0.1);
+  padding: 20px;
+  min-height: 484px;
+  max-width: 290px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 30px;
+    min-height: 277px;
+    max-width: 565px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 293px;
+    padding-right: 40px;
+    max-width: 700px;
+  }
+}
+
+.reviews__photo {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    width: 186px;
+    height: 237px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 258px;
+    height: 253px;
+  }
+}
+
+.reviews p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 15px;
+
+  @media (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 2px;
+  }
+}
+
+.reviews p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.reviews__name {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
+.reviews__details {
+  display: block;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+}

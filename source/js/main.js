@@ -94,3 +94,25 @@ new Swiper('.training__swiper', {
     }
   },
 });
+
+new Swiper('.reviews__swiper', {
+  modules: [Navigation],
+  slidesPerView: 1,
+  speed: 1500,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.reviews__swiper-button--next',
+    prevEl: '.reviews__swiper-button--prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      slidesOffsetAfter: 60,
+    },
+    1440: {
+      slidesPerView: 'auto',
+      slidesOffsetAfter: 220,
+      spaceBetween: 100,
+    },
+  },
+});
