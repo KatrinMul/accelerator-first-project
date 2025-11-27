@@ -114,8 +114,6 @@
   outline: none;
 }
 
-.request__input:active {}
-
 .request__input:disabled {
   border-color: $disabled-color;
   color: rgba(153, 153, 153, 0.5);
@@ -124,7 +122,6 @@
 .request__input.error {
     border-color: #ff121f;
 }
-
 
 .request__button {
   width: 258px;

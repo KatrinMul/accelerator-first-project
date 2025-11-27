@@ -3,6 +3,9 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
+
+const screenWidth = window.innerWidth;
+
 const nav = document.querySelector('.nav');
 const navButton = document.querySelector('.nav__button');
 
@@ -177,3 +180,29 @@ inputs.forEach((input) => {
     }
   });
 });
+
+let advantagesSwiper;
+
+function initAdvantagesSwiper() {
+  if (screenWidth >= 1440 && advantagesSwiper === undefined) {
+    advantagesSwiper = new Swiper('.advantages__container', {
+      slidesPerView: 'auto',
+      speed: 1500,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.advantages__swiper-button--next',
+        prevEl: '.advantages__swiper-button--prev',
+      },
+      loop: true,
+    });
+  } else if (screenWidth < 1440 && advantagesSwiper !== undefined) {
+    advantagesSwiper.destroy(true, true);
+    advantagesSwiper = undefined;
+
+    document.querySelector('.advantages__list').style.display = 'flex';
+  }
+}
+
+initAdvantagesSwiper();
+
+window.addEventListener('resize', initAdvantagesSwiper);
