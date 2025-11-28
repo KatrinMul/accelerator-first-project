@@ -120,6 +120,47 @@ new Swiper('.reviews__swiper', {
   },
 });
 
+const DESKTOP_WIDTH = 1440;
+let advantagesSwiper = null;
+const swiperAdvContainer = document.querySelector('.advantages__container');
+
+function initializeSwiper() {
+  if (swiperAdvContainer && advantagesSwiper === null) {
+    advantagesSwiper = new Swiper('.advantages__container', {
+      modules: [Navigation],
+      slidesPerView: 'auto',
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      centeredSlides: true,
+      initialSlide: 2,
+      loop: true,
+      navigation: {
+        nextEl: '.advantages__swiper-button--next',
+        prevEl: '.advantages__swiper-button--prev',
+      },
+    });
+  }
+}
+
+function destroySwiper() {
+  if (advantagesSwiper !== null) {
+    advantagesSwiper.destroy(true, true);
+    advantagesSwiper = null;
+  }
+}
+
+function handleSwiperState() {
+  if (window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`).matches) {
+    initializeSwiper();
+  } else {
+    destroySwiper();
+  }
+}
+
+handleSwiperState();
+
+window.addEventListener('resize', handleSwiperState);
+
 
 const inputs = document.querySelectorAll('.request__input');
 
@@ -140,7 +181,7 @@ function validateAndSetPlaceholder(input) {
       isValid = false;
     }
   } else if (input.type === 'tel') {
-    const phonePattern = /^\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}$/;
+    const phonePattern = /^\+\d+/;
     if (!phonePattern.test(input.value)) {
       isValid = false;
     }
@@ -180,29 +221,3 @@ inputs.forEach((input) => {
     }
   });
 });
-
-let advantagesSwiper;
-
-function initAdvantagesSwiper() {
-  if (screenWidth >= 1440 && advantagesSwiper === undefined) {
-    advantagesSwiper = new Swiper('.advantages__container', {
-      slidesPerView: 'auto',
-      speed: 1500,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: '.advantages__swiper-button--next',
-        prevEl: '.advantages__swiper-button--prev',
-      },
-      loop: true,
-    });
-  } else if (screenWidth < 1440 && advantagesSwiper !== undefined) {
-    advantagesSwiper.destroy(true, true);
-    advantagesSwiper = undefined;
-
-    document.querySelector('.advantages__list').style.display = 'flex';
-  }
-}
-
-initAdvantagesSwiper();
-
-window.addEventListener('resize', initAdvantagesSwiper);
