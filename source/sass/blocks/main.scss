@@ -1,0 +1,89 @@
+.main {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.81)),
+    url('../../img/clouds-1.png');
+  background-size: 1176px 786px;
+  background-position: calc(50vw + 19px) 560px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet) {
+    background-image: url('../../img/clouds-1.png');
+    background-position: calc(50vw - 41px) 925px;
+    background-size: 2046px 1630px;
+  }
+
+  @media (min-width: $desktop) {
+    background-position: calc(50vw + 118px) 642px;
+  }
+}
+
+.main::before {
+  display: none;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1200px;
+    height: 401px;
+    top: 4096px;
+    right: calc(50% - 369px);
+    background-image: url('../../img/clouds-2.png');
+    background-size: 1200px 401px;
+    background-position: 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    top: 3455px;
+    right: calc(50% - 170px);
+  }
+}
+
+.main::after {
+  display: none;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 788px;
+    height: 263px;
+    top: 4583px;
+    left: calc(50% - 171px);
+    background-image: url('../../img/clouds-2.png');
+    background-size: 788px 263px;
+    background-position: 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    top: 3655px;
+    left: calc(50% + 270px);
+  }
+}
+
+.main__training {
+  position: relative;
+}
+
+.main__training::before {
+  display: none;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 840px;
+    height: 280px;
+    top: 612px;
+    left: calc(50% - 81px);
+    background-image: url('../../img/clouds-2.png');
+    background-size: 840px 280px;
+    background-position: 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    top: 660px;
+    left: calc(50% + 110px);
+  }
+}
