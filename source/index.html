@@ -511,7 +511,61 @@
         </div>
       </div>
     </section>
-
+    <section class="main__gallery gallery" data-test="gallery">
+      <h2 class="gallery__title title">Фотогалерея<span class="gallery__title-double title-double">Фотогалерея</span>
+      </h2>
+      <div class="gallery__box">
+        <p>Добавляйте фото с хэштегом #лайфтур, а&nbsp;также&nbsp;отмечайте&nbsp;нас на фото. Лучшие фотографии украсят
+          этот раздел
+          нашего сайта.</p>
+        <div class="gallery__swiper-navigation">
+          <button class="gallery__swiper-button gallery__swiper-button--prev swiper-button swiper-button--prev"
+            disabled><span class="visually-hidden">Слайд
+              назад</span></button>
+          <button class="gallery__swiper-button gallery__swiper-button--next swiper-button swiper-button--next"><span
+              class="visually-hidden">Слайд
+              вперед</span></button>
+        </div>
+      </div>
+      <div class="gallery__container swiper">
+        <ul class="gallery__list swiper-wrapper">
+          <li class="gallery__item swiper-slide">
+            <div class="gallery__item-wrapper">
+              <img class="gallery__photo" src="img/gallery-photo-1.jpg" srcset="img/gallery-photo-1.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="463">
+            </div>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <div class="gallery__item-wrapper">
+              <img class="gallery__photo-pairs" src="img/gallery-photo-2.jpg" srcset="img/gallery-photo-2.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="223">
+              <img class="gallery__photo-pairs" src="img/gallery-photo-3.jpg" srcset="img/gallery-photo-3.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="223">
+            </div>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <div class="gallery__item-wrapper">
+              <img class="gallery__photo" src="img/gallery-photo-4.jpg" srcset="img/gallery-photo-4.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="463">
+            </div>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <div class="gallery__item-wrapper">
+              <img class="gallery__photo-pairs" src="img/gallery-photo-5.jpg" srcset="img/gallery-photo-5.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="223">
+              <img class="gallery__photo-pairs" src="img/gallery-photo-6.jpg" srcset="img/gallery-photo-6.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="223">
+            </div>
+          </li>
+          <li class="gallery__item swiper-slide">
+            <div class="gallery__item-wrapper">
+              <img class="gallery__photo" src="img/gallery-photo-7.jpg" srcset="img/gallery-photo-7.jpg 2x"
+                alt="Фотография фотогалереи" width="284" height="463">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="main__request request" data-test="form">
       <div class="request__wrapper">
         <h2>Остались вопросы?</h2>
@@ -605,13 +659,6 @@
       <a class="footer__link footer__link--policy" href="#">Политика конфиденциальности</a>
     </div>
   </footer>
-
-  <!-- примеры требуемых атрибутов data-test="*" -->
-  <!--  <img src="/__spritemap#sprite-logo-view" width="410" height="1000" alt="Это спрайт"> -->
-  <div data-test="reviews">reviews</div>
-  <div data-test="adv">adv</div>
-  <div data-test="gallery">gallery</div>
-  <div data-test="form">form</div>
   <script type="module" src="js/main.js"></script>
 </body>
 

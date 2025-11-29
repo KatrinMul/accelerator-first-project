@@ -3,9 +3,6 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
-
-const screenWidth = window.innerWidth;
-
 const nav = document.querySelector('.nav');
 const navButton = document.querySelector('.nav__button');
 
@@ -122,9 +119,11 @@ new Swiper('.reviews__swiper', {
 
 const DESKTOP_WIDTH = 1440;
 let advantagesSwiper = null;
+let gallerySwiper = null;
 const swiperAdvContainer = document.querySelector('.advantages__container');
+const swiperGalleryContainer = document.querySelector('.gallery__container');
 
-function initializeSwiper() {
+function initializeAdvSwiper() {
   if (swiperAdvContainer && advantagesSwiper === null) {
     advantagesSwiper = new Swiper('.advantages__container', {
       modules: [Navigation],
@@ -142,18 +141,41 @@ function initializeSwiper() {
   }
 }
 
-function destroySwiper() {
-  if (advantagesSwiper !== null) {
-    advantagesSwiper.destroy(true, true);
-    advantagesSwiper = null;
+function initializeGallerySwiper() {
+  if (swiperGalleryContainer && gallerySwiper === null) {
+    gallerySwiper = new Swiper('.gallery__container', {
+      modules: [Navigation],
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 5,
+      loop: true,
+      navigation: {
+        nextEl: '.gallery__swiper-button--next',
+        prevEl: '.gallery__swiper-button--prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  }
+}
+
+function destroySwiper(nameSwiper) {
+  if (nameSwiper !== null) {
+    nameSwiper.destroy(true, true);
+    nameSwiper = null;
   }
 }
 
 function handleSwiperState() {
   if (window.matchMedia(`(min-width: ${DESKTOP_WIDTH}px)`).matches) {
-    initializeSwiper();
+    initializeAdvSwiper();
+    destroySwiper(gallerySwiper);
   } else {
-    destroySwiper();
+    destroySwiper(advantagesSwiper);
+    initializeGallerySwiper();
   }
 }
 
@@ -181,7 +203,7 @@ function validateAndSetPlaceholder(input) {
       isValid = false;
     }
   } else if (input.type === 'tel') {
-    const phonePattern = /^\+\d+/;
+    const phonePattern = /^[\d\s()\-+]+$/;
     if (!phonePattern.test(input.value)) {
       isValid = false;
     }
