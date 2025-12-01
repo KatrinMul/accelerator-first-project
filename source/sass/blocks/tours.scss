@@ -40,24 +40,36 @@
   background-size: cover;
 
   &--caucasus {
-    background-image: url(../../img/card-background-caucasus.webp);
+    background-image: $card-overlay, image-set(url(../../img/card-background-caucasus@1x.webp), url(../../img/card-background-caucasus@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $card-overlay, image-set(url(../../img/card-background-caucasus@2x.webp), url(../../img/card-background-caucasus@2x.jpg));
+    }
   }
 
   &--altai {
-    background-image: url(../../img/card-background-altai.webp);
+    background-image: $card-overlay, image-set(url(../../img/card-background-altai@1x.webp), url(../../img/card-background-altai@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $card-overlay, image-set(url(../../img/card-background-altai@2x.webp), url(../../img/card-background-altai@2x.jpg));
+    }
   }
 
   &--adygea {
-    background-image: url(../../img/card-background-adygea.webp);
+    background-image: $card-overlay, image-set(url(../../img/card-background-adygea@1x.webp), url(../../img/card-background-adygea@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $card-overlay, image-set(url(../../img/card-background-adygea@2x.webp), url(../../img/card-background-adygea@2x.jpg));
+    }
   }
 
   &--ural {
-    background-image: url(../../img/card-background-ural.webp);
+    background-image: $card-overlay, image-set(url(../../img/card-background-ural@1x.webp), url(../../img/card-background-ural@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $card-overlay, image-set(url(../../img/card-background-ural@2x.webp), url(../../img/card-background-ural@2x.jpg));
+    }
   }
-
-  @media (min-width: $tablet) {}
-
-  @media (min-width: $desktop) {}
 }
 
 .tours__slide-container {

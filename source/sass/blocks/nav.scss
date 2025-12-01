@@ -107,6 +107,22 @@
   }
 }
 
+.nav--opened::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $menu-overlay;
+  z-index: 3;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
 .nav--closed .nav__button {
   display: block;
   background-color: #ffffff;

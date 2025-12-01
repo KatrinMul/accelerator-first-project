@@ -8,15 +8,27 @@
   text-align: center;
 
   &--caucasus {
-    background-image: url(../../img/slide-background-caucasus.webp);
+    background-image: $slider-overlay, image-set(url(../../img/slide-background-caucasus@1x.webp), url(../../img/slide-background-caucasus@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $slider-overlay, image-set(url(../../img/slide-background-caucasus@2x.webp), url(../../img/slide-background-caucasus@2x.jpg));
+    }
   }
 
   &--kamchatka {
-    background-image: url(../../img/slide-background-kamchatka.webp);
+    background-image: $slider-overlay, image-set(url(../../img/slide-background-kamchatka@1x.webp), url(../../img/slide-background-kamchatka@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $slider-overlay, image-set(url(../../img/slide-background-kamchatka@2x.webp), url(../../img/slide-background-kamchatka@2x.jpg));
+    }
   }
 
   &--altai {
-    background-image: url(../../img/slide-background-altai.webp);
+    background-image: $slider-overlay, image-set(url(../../img/slide-background-altai@1x.webp), url(../../img/slide-background-altai@1x.jpg));
+
+    @media (min-resolution: 2dppx) {
+      background-image: $slider-overlay, image-set(url(../../img/slide-background-altai@2x.webp), url(../../img/slide-background-altai@2x.jpg));
+    }
   }
 
   @media (min-width: $tablet) {
@@ -217,21 +229,40 @@
 }
 
 .swiper__slide-photo-1 {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-190px, -50%) rotate(-17.7deg);
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    width: 194px;
+    height: 266px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-190px, -50%) rotate(-17.7deg);
+  }
+
+  @media (min-width: $desktop) {
+    width: 225px;
+    height: 308px;
+  }
 }
 
 .swiper__slide-photo-2 {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(30px, -40%) rotate(20deg);
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    width: 167px;
+    height: 229px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(30px, -40%) rotate(20deg);
+  }
 
   @media (min-width: $desktop) {
+    width: 196px;
+    height: 270px;
     transform: translate(-25px, -40%) rotate(20deg);
   }
 }

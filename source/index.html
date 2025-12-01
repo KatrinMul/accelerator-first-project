@@ -29,32 +29,32 @@
         </a>
         <ul class="nav__list menu">
           <li class="menu__item menu__item--current">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#section-tours">
               <span class="menu__link-text">Туры</span>
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#section-training">
               <span class="menu__link-text">Обучение</span>
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#section-about">
               <span class="menu__link-text">О нас</span>
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#section-reviews">
               <span class="menu__link-text">Отзывы</span>
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#section-gallery">
               <span class="menu__link-text">Фотографии</span>
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#section-contacts">
               <span class="menu__link-text">Контакты</span>
             </a>
           </li>
@@ -62,9 +62,7 @@
         <a class="nav__phone-link" href="tel:+78000000000">8 800 000-00-00</a>
       </div>
     </nav>
-
   </header>
-
   <main class="page-body__main main">
     <section class="main__hero hero" data-test="hero">
       <h1 class="visually-hidden">Направления туров</h1>
@@ -90,16 +88,18 @@
               <a href="#" class="swiper__link button"><span class="swiper__link-box">Смотреть тур</span></a>
               <div class="swiper__slide-box">
                 <picture>
-                  <source media="(min-width:1440px)" srcset="img/slide-photo-1.jpg 1x, img/slide-photo-1.jpg 2x"
-                    type="image/jpg" width="225" height="308">
-                  <img class="swiper__slide-photo-1" src="img/slide-photo-1.jpg" alt="Фото озера" width="194"
-                    height="266">
+                  <source srcset="img/slide-photo-1@1x.webp 1x, img/slide-photo-1@2x.webp 2x" type="image/webp"
+                    width="225" height="308">
+                  <img class="swiper__slide-photo-1" src="img/slide-photo-1@1x.jpg"
+                    srcset="img/slide-photo-1@1x.jpg 1x, img/slide-photo-1@2x.jpg 2x" alt="Фото озера" width="225"
+                    height="308">
                 </picture>
                 <picture>
-                  <source media="(min-width:1440px)" srcset="img/slide-photo-2.jpg 1x, img/slide-photo-2.jpg 2x"
-                    type="image/jpg" width="196" height="270">
-                  <img class="swiper__slide-photo-2" src="img/slide-photo-2.jpg" alt="Фото озера" width="167"
-                    height="229">
+                  <source srcset="img/slide-photo-2@1x.webp 1x, img/slide-photo-2@2x.webp 2x" type="image/webp"
+                    width="196" height="270">
+                  <img class="swiper__slide-photo-2" src="img/slide-photo-2@1x.jpg"
+                    srcset="img/slide-photo-2@1x.jpg 1x, img/slide-photo-2@2x.jpg 2x" alt="Девушка в горах" width="196"
+                    height="270">
                 </picture>
               </div>
               <div class="swiper__box">
@@ -124,7 +124,7 @@
         <div class="swiper__pagination swiper-pagination"></div>
       </div>
     </section>
-    <section class="main__tours tours" data-test="tours">
+    <section class="main__tours tours" id="section-tours" data-test="tours">
       <div class="tours__header">
         <h2 class="tours__title title">Ближайшие туры<span class="tours__title-double title-double"
             aria-hidden="true">Ближайшие
@@ -220,7 +220,7 @@
       </div>
       <a class="tours__link" href="#">Показать все туры</a>
     </section>
-    <section class="main__training training" data-test="training">
+    <section class="main__training training" id="section-training" data-test="training">
       <h2 class="training__title title">Обучение<span class="training__title-double title-double"
           aria-hidden="true">Обучение</span></h2>
       <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых десятки
@@ -241,7 +241,10 @@
           <div class="training__swiper-slide swiper-slide instructor">
             <div class="instructor__wrapper">
               <picture>
-                <img class="instructor__photo" src="img/instructor-1.jpg" alt="Фотография Александра Прокофьева"
+                <source srcset="img/instructor-1@1x.webp 1x, img/instructor-1@2x.webp 2x" type="image/webp" width="260"
+                  height="200">
+                <img class="instructor__photo" src="img/instructor-1@1x.jpg"
+                  srcset="img/instructor-1@1x.jpg 1x, img/instructor-1@2x.jpg 2x" alt="Фотография Александра Прокофьева"
                   width="260" height="200">
               </picture>
               <div class="instructor__box">
@@ -254,7 +257,10 @@
           <div class="training__swiper-slide swiper-slide instructor">
             <div class="instructor__wrapper">
               <picture>
-                <img class="instructor__photo" src="img/instructor-2.jpg" alt="Фотография Светланы Афиногеновой"
+                <source srcset="img/instructor-2@1x.webp 1x, img/instructor-2@2x.webp 2x" type="image/webp" width="260"
+                  height="200">
+                <img class="instructor__photo" src="img/instructor-2@1x.jpg"
+                  srcset="img/instructor-2@1x.jpg 1x, img/instructor-2@2x.jpg 2x" alt="Фотография Светланы Афиногеновой"
                   width="260" height="200">
               </picture>
               <div class="instructor__box">
@@ -269,7 +275,10 @@
           <div class="training__swiper-slide swiper-slide instructor">
             <div class="instructor__wrapper">
               <picture>
-                <img class="instructor__photo" src="img/instructor-3.jpg" alt="Фотография Надежды Колесниченко"
+                <source srcset="img/instructor-3@1x.webp 1x, img/instructor-3@2x.webp 2x" type="image/webp" width="260"
+                  height="200">
+                <img class="instructor__photo" src="img/instructor-3@1x.jpg"
+                  srcset="img/instructor-3@1x.jpg 1x, img/instructor-3@2x.jpg 2x" alt="Фотография Надежды Колесниченко"
                   width="260" height="200">
               </picture>
               <div class="instructor__box">
@@ -283,7 +292,10 @@
           <div class="training__swiper-slide swiper-slide instructor">
             <div class="instructor__wrapper">
               <picture>
-                <img class="instructor__photo" src="img/instructor-4.jpg" alt="Фотография Федора Кайгородова"
+                <source srcset="img/instructor-4@1x.webp 1x, img/instructor-4@2x.webp 2x" type="image/webp" width="260"
+                  height="200">
+                <img class="instructor__photo" src="img/instructor-4@1x.jpg"
+                  srcset="img/instructor-4@1x.jpg 1x, img/instructor-4@2x.jpg 2x" alt="Фотография Федора Кайгородова"
                   width="260" height="200">
               </picture>
               <div class="instructor__box">
@@ -297,8 +309,11 @@
           <div class="training__swiper-slide swiper-slide instructor">
             <div class="instructor__wrapper">
               <picture>
-                <img class="instructor__photo" src="img/instructor-5.jpg" alt="Фотография Даниэля Васнецова" width="260"
+                <source srcset="img/instructor-5@1x.webp 1x, img/instructor-5@2x.webp 2x" type="image/webp" width="260"
                   height="200">
+                <img class="instructor__photo" src="img/instructor-5@1x.jpg"
+                  srcset="img/instructor-5@1x.jpg 1x, img/instructor-5@2x.jpg 2x" alt="Фотография Даниэля Васнецова"
+                  width="260" height="200">
               </picture>
               <div class="instructor__box">
                 <h4>Даниэль<br>Васнецов</h4>
@@ -327,9 +342,12 @@
         </ul>
       </article>
     </section>
-    <section class="main__about about" data-test="about">
+    <section class="main__about about" id="section-about" data-test="about">
       <picture>
-        <img class="about__photo" src="img/photo-about.jpg" alt="Фотография нас" width="877" height="538">
+        <source srcset="img/photo-about@1x.webp 1x, img/photo-about@2x.webp 2x" type="image/webp" width="877"
+          height="538">
+        <img class="about__photo" src="img/photo-about@1x.jpg"
+          srcset="img/photo-about@1x.jpg 1x, img/photo-about@2x.jpg 2x" alt="Фотография нас" width="877" height="538">
       </picture>
       <div class="about__wrapper">
         <h2>О нас<span class="about__title-double title-double">О нас</span></h2>
@@ -349,7 +367,7 @@
         </ul>
       </div>
     </section>
-    <section class="main__reviews reviews" data-test="reviews">
+    <section class="main__reviews reviews" id="section-reviews" data-test="reviews">
       <div class="reviews__swiper-header">
         <h2 class="reviews__title title">Отзывы<span class="reviews__title-double title-double">Отзывы</span></h2>
         <div class="reviews__swiper-navigation">
@@ -364,8 +382,11 @@
           <div class="reviews__swiper-slide swiper-slide">
             <div class="reviews__wrapper">
               <picture>
-                <img class="reviews__photo" src="img/review-photo-1.jpg" alt="Фотография к отзыву Фролова Александра"
+                <source srcset="img/review-photo-1@1x.webp 1x, img/review-photo-1@2x.webp 2x" type="image/webp"
                   width="250" height="169">
+                <img class="reviews__photo" src="img/review-photo-1@1x.jpg"
+                  srcset="img/review-photo-1@1x.jpg 1x, img/review-photo-1@2x.jpg 2x"
+                  alt="Фотография к отзыву Фролова Александра" width="250" height="169">
               </picture>
               <div class="reviews__box">
                 <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты,
@@ -381,8 +402,11 @@
           <div class="reviews__swiper-slide swiper-slide">
             <div class="reviews__wrapper">
               <picture>
-                <img class="reviews__photo" src="img/review-photo-2.jpg" alt="Фотография к отзыву Ивана Соловьёва"
+                <source srcset="img/review-photo-2@1x.webp 1x, img/review-photo-2@2x.webp 2x" type="image/webp"
                   width="250" height="169">
+                <img class="reviews__photo" src="img/review-photo-2@1x.jpg"
+                  srcset="img/review-photo-2@1x.jpg 1x, img/review-photo-2@2x.jpg 2x"
+                  alt="Фотография к отзыву Ивана Соловьёва" width="250" height="169">
               </picture>
               <div class="reviews__box">
                 <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли
@@ -398,8 +422,11 @@
           <div class="reviews__swiper-slide swiper-slide">
             <div class="reviews__wrapper">
               <picture>
-                <img class="reviews__photo" src="img/review-photo-3.jpg" alt="Фотография к отзыву Евгении Баженовой"
+                <source srcset="img/review-photo-3@1x.webp 1x, img/review-photo-3@2x.webp 2x" type="image/webp"
                   width="250" height="169">
+                <img class="reviews__photo" src="img/review-photo-3@1x.jpg"
+                  srcset="img/review-photo-3@1x.jpg 1x, img/review-photo-3@2x.jpg 2x"
+                  alt="Фотография к отзыву Евгении Баженовой" width="250" height="169">
               </picture>
               <div class="reviews__box">
                 <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала
@@ -414,8 +441,11 @@
           <div class="reviews__swiper-slide swiper-slide">
             <div class="reviews__wrapper">
               <picture>
-                <img class="reviews__photo" src="img/review-photo-4.jpg" alt="Фотография к отзыву Елены Пироговой"
+                <source srcset="img/review-photo-4@1x.webp 1x, img/review-photo-4@2x.webp 2x" type="image/webp"
                   width="250" height="169">
+                <img class="reviews__photo" src="img/review-photo-4@1x.jpg"
+                  srcset="img/review-photo-4@1x.jpg 1x, img/review-photo-4@2x.jpg 2x"
+                  alt="Фотография к отзыву Елены Пироговой" width="250" height="169">
               </picture>
               <div class="reviews__box">
                 <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда
@@ -511,7 +541,7 @@
         </div>
       </div>
     </section>
-    <section class="main__gallery gallery" data-test="gallery">
+    <section class="main__gallery gallery" id="section-gallery" data-test="gallery">
       <h2 class="gallery__title title">Фотогалерея<span class="gallery__title-double title-double">Фотогалерея</span>
       </h2>
       <div class="gallery__box">
@@ -531,36 +561,71 @@
         <ul class="gallery__list swiper-wrapper">
           <li class="gallery__item swiper-slide">
             <div class="gallery__item-wrapper">
-              <img class="gallery__photo" src="img/gallery-photo-1.jpg" srcset="img/gallery-photo-1.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="463">
+              <picture>
+                <source srcset="img/gallery-photo-1@1x.webp 1x, img/gallery-photo-1@2x.webp 2x" type="image/webp"
+                  width="284" height="463">
+                <img class="gallery__photo" src="img/gallery-photo-1@1x.jpg"
+                  srcset="img/gallery-photo-1@1x.jpg 1x, img/gallery-photo-1@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="463">
+              </picture>
             </div>
           </li>
           <li class="gallery__item swiper-slide">
             <div class="gallery__item-wrapper">
-              <img class="gallery__photo-pairs" src="img/gallery-photo-2.jpg" srcset="img/gallery-photo-2.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="223">
-              <img class="gallery__photo-pairs" src="img/gallery-photo-3.jpg" srcset="img/gallery-photo-3.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="223">
+              <picture>
+                <source srcset="img/gallery-photo-2@1x.webp 1x, img/gallery-photo-2@2x.webp 2x" type="image/webp"
+                  width="284" height="223">
+                <img class="gallery__photo-pairs" src="img/gallery-photo-2@1x.jpg"
+                  srcset="img/gallery-photo-2@1x.jpg 1x, img/gallery-photo-2@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="223">
+              </picture>
+              <picture>
+                <source srcset="img/gallery-photo-3@1x.webp 1x, img/gallery-photo-3@2x.webp 2x" type="image/webp"
+                  width="284" height="223">
+                <img class="gallery__photo-pairs" src="img/gallery-photo-3@1x.jpg"
+                  srcset="img/gallery-photo-3@1x.jpg 1x, img/gallery-photo-3@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="223">
+              </picture>
             </div>
           </li>
           <li class="gallery__item swiper-slide">
             <div class="gallery__item-wrapper">
-              <img class="gallery__photo" src="img/gallery-photo-4.jpg" srcset="img/gallery-photo-4.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="463">
+              <picture>
+                <source srcset="img/gallery-photo-4@1x.webp 1x, img/gallery-photo-4@2x.webp 2x" type="image/webp"
+                  width="284" height="463">
+                <img class="gallery__photo" src="img/gallery-photo-4@1x.jpg"
+                  srcset="img/gallery-photo-4@1x.jpg 1x, img/gallery-photo-4@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="463">
+              </picture>
             </div>
           </li>
           <li class="gallery__item swiper-slide">
             <div class="gallery__item-wrapper">
-              <img class="gallery__photo-pairs" src="img/gallery-photo-5.jpg" srcset="img/gallery-photo-5.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="223">
-              <img class="gallery__photo-pairs" src="img/gallery-photo-6.jpg" srcset="img/gallery-photo-6.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="223">
+              <picture>
+                <source srcset="img/gallery-photo-5@1x.webp 1x, img/gallery-photo-5@2x.webp 2x" type="image/webp"
+                  width="284" height="223">
+                <img class="gallery__photo-pairs" src="img/gallery-photo-5@1x.jpg"
+                  srcset="img/gallery-photo-5@1x.jpg 1x, img/gallery-photo-5@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="223">
+              </picture>
+              <picture>
+                <source srcset="img/gallery-photo-6@1x.webp 1x, img/gallery-photo-6@2x.webp 2x" type="image/webp"
+                  width="284" height="223">
+                <img class="gallery__photo-pairs" src="img/gallery-photo-6@1x.jpg"
+                  srcset="img/gallery-photo-6@1x.jpg 1x, img/gallery-photo-6@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="223">
+              </picture>
             </div>
           </li>
           <li class="gallery__item swiper-slide">
             <div class="gallery__item-wrapper">
-              <img class="gallery__photo" src="img/gallery-photo-7.jpg" srcset="img/gallery-photo-7.jpg 2x"
-                alt="Фотография фотогалереи" width="284" height="463">
+              <picture>
+                <source srcset="img/gallery-photo-7@1x.webp 1x, img/gallery-photo-7@2x.webp 2x" type="image/webp"
+                  width="284" height="463">
+                <img class="gallery__photo" src="img/gallery-photo-7@1x.jpg"
+                  srcset="img/gallery-photo-7@1x.jpg 1x, img/gallery-photo-7@2x.jpg 2x" alt="Фотография фотогалереи"
+                  width="284" height="463">
+              </picture>
             </div>
           </li>
         </ul>
@@ -585,7 +650,7 @@
   </main>
 
   <footer class="page-body__footer footer" data-test="footer">
-    <section class="footer__contacts contacts">
+    <section class="footer__contacts contacts" id="section-contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title title">Контакты<span class="contacts__title-double title-double"
             aria-hidden="true">Контакты</span></h2>
@@ -607,12 +672,19 @@
         </ul>
       </div>
       <picture>
-        <source media="(min-width:1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop.jpg 2x" type="image/jpeg"
-          width="600" height="324">
-        <source media="(min-width:768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet.jpg 2x" type="image/jpeg"
+        <source media="(min-width:1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x"
+          type="image/webp" width="600" height="324">
+        <source media="(min-width:768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x"
+          type="image/webp" width="768" height="340">
+        <source srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" type="image/webp" width="320"
+          height="343">
+        <source media="(min-width:1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x"
+          type="image/jpeg" width="600" height="324">
+        <source media="(min-width:768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" type="image/jpeg"
           width="768" height="340">
-        <img class="contacts__map" src="img/map-mobile.jpg" srcset="img/map-mobile.jpg 2x" alt="Расположение на карте"
-          width="320" height="343">
+        <img class="contacts__map" src="img/map-mobile@1x.jpg"
+          srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x" alt="Расположение на карте" width="320"
+          height="343">
       </picture>
     </section>
     <div class="footer__container">
@@ -625,22 +697,22 @@
         </a>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="">Туры</a>
+            <a class="footer__link" href="#section-tours">Туры</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="">Обучение</a>
+            <a class="footer__link" href="#section-training">Обучение</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="">О нас</a>
+            <a class="footer__link" href="#section-about">О нас</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="">Отзывы</a>
+            <a class="footer__link" href="#section-reviews">Отзывы</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="">Фотографии</a>
+            <a class="footer__link" href="#section-gallery">Фотографии</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="">Контакты</a>
+            <a class="footer__link" href="#section-contacts">Контакты</a>
           </li>
         </ul>
         <a class="footer__phone-link" href="tel:+78007253232">8 800 725-32-32</a>

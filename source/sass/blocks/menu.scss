@@ -22,14 +22,18 @@
 }
 
 .menu__link:hover {
-  border-bottom: 1px solid $base-color-ondark;
+  @media (min-width: $desktop) {
+    border-bottom: 1px solid $base-color-ondark;
+  }
 }
 
 .menu__link:focus {
   outline: none;
+  border: none;
 }
 
 .menu__link:focus-visible {
+  border-bottom: none;
   outline: 1px solid $base-color-ondark;
   outline-offset: 2px;
 }

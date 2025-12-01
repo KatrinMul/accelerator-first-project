@@ -1,8 +1,13 @@
 .request {
-  background: $additional-color url(../../img/form-background.webp);
+  background: $additional-color;
+  background-image: image-set(url(../../img/form-background@1x.webp), url(../../img/form-background@1x.jpg));
   background-size: cover;
   background-position: 60% 50%;
   min-height: 638px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url(../../img/form-background@2x.webp), url(../../img/form-background@2x.jpg));
+  }
 
   @media (min-width: $tablet) {
     min-height: 680px;
@@ -87,7 +92,7 @@
 }
 
 .request__input {
-  border: 1px solid rgba(2, 102, 193,0.1);
+  border: 1px solid rgba(2, 102, 193, 0.1);
   border-radius: 2px;
   width: 258px;
   height: 50px;

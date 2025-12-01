@@ -3,14 +3,29 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
+const DESKTOP_WIDTH = 1440;
 const nav = document.querySelector('.nav');
 const navButton = document.querySelector('.nav__button');
+const menuLiks = nav.querySelectorAll('.menu__link');
 
 nav.classList.add('nav--closed');
 
 navButton.addEventListener('click', () => {
   nav.classList.toggle('nav--closed');
   nav.classList.toggle('nav--opened');
+  if(nav.classList.contains('nav--opened')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
+
+menuLiks.forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.toggle('nav--closed');
+    nav.classList.toggle('nav--opened');
+    document.body.style.overflow = '';
+  });
 });
 
 
@@ -117,7 +132,6 @@ new Swiper('.reviews__swiper', {
   },
 });
 
-const DESKTOP_WIDTH = 1440;
 let advantagesSwiper = null;
 let gallerySwiper = null;
 const swiperAdvContainer = document.querySelector('.advantages__container');
