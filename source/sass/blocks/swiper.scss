@@ -6,28 +6,29 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+  position: relative;
 
   &--caucasus {
-    background-image: $slider-overlay, image-set(url(../../img/slide-background-caucasus@1x.webp), url(../../img/slide-background-caucasus@1x.jpg));
+    background-image: $slider-overlay, image-set(url("../../img/slide-background-caucasus@1x.webp"), url("../../img/slide-background-caucasus@1x.jpg"));
 
-    @media (min-resolution: 2dppx) {
-      background-image: $slider-overlay, image-set(url(../../img/slide-background-caucasus@2x.webp), url(../../img/slide-background-caucasus@2x.jpg));
+    @media (resolution >=2dppx) {
+      background-image: $slider-overlay, image-set(url("../../img/slide-background-caucasus@2x.webp"), url("../../img/slide-background-caucasus@2x.jpg"));
     }
   }
 
   &--kamchatka {
-    background-image: $slider-overlay, image-set(url(../../img/slide-background-kamchatka@1x.webp), url(../../img/slide-background-kamchatka@1x.jpg));
+    background-image: $slider-overlay, image-set(url("../../img/slide-background-kamchatka@1x.webp"), url("../../img/slide-background-kamchatka@1x.jpg"));
 
-    @media (min-resolution: 2dppx) {
-      background-image: $slider-overlay, image-set(url(../../img/slide-background-kamchatka@2x.webp), url(../../img/slide-background-kamchatka@2x.jpg));
+    @media (resolution >=2dppx) {
+      background-image: $slider-overlay, image-set(url("../../img/slide-background-kamchatka@2x.webp"), url("../../img/slide-background-kamchatka@2x.jpg"));
     }
   }
 
   &--altai {
-    background-image: $slider-overlay, image-set(url(../../img/slide-background-altai@1x.webp), url(../../img/slide-background-altai@1x.jpg));
+    background-image: $slider-overlay, image-set(url("../../img/slide-background-altai@1x.webp"), url("../../img/slide-background-altai@1x.jpg"));
 
-    @media (min-resolution: 2dppx) {
-      background-image: $slider-overlay, image-set(url(../../img/slide-background-altai@2x.webp), url(../../img/slide-background-altai@2x.jpg));
+    @media (resolution >=2dppx) {
+      background-image: $slider-overlay, image-set(url("../../img/slide-background-altai@2x.webp"), url("../../img/slide-background-altai@2x.jpg"));
     }
   }
 
@@ -43,21 +44,25 @@
 }
 
 .swiper__slide-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-height: 472px;
   max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: $tablet) {
     max-width: 678px;
+    min-height: 913px;
   }
 
   @media (min-width: $desktop) {
+    display: block;
     margin: 0 auto;
     position: relative;
     text-align: left;
     max-width: 1200px;
+    min-height: unset;
     top: 0;
     left: 0;
     transform: none;
@@ -83,11 +88,12 @@
     font-size: 77px;
     line-height: 77px;
     max-width: 946px;
+    margin-bottom: 23px;
   }
 }
 
 .swiper__slide p {
-  margin: 0 auto 60px;
+  margin: 0 auto 61px;
   padding: 0;
   font-weight: 400;
   font-size: 15px;
@@ -102,7 +108,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 35px;
+    margin: 0 0 37px;
     max-width: 470px;
   }
 }
@@ -133,15 +139,19 @@
   display: none;
   position: relative;
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     display: block;
-    padding: 14px 20px 14px 40px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 13px 19px 13px 39px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     color: $base-color-ondark;
   }
+}
+
+.swiper__label:nth-child(2) {
+  padding-right: 20px;
 }
 
 .swiper__label::before {
@@ -151,7 +161,7 @@
   width: 12px;
   height: 12px;
   top: 50%;
-  left: 20px;
+  left: 19px;
   transform: translateY(-50%);
   background-color: #ffffff;
   mask-repeat: no-repeat;
@@ -192,6 +202,11 @@
   height: 16px;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .swiper__pagination .swiper-pagination-bullet-active {
@@ -203,12 +218,12 @@
 }
 
 .swiper__pagination .swiper-pagination-bullet:focus {
-  outline: 1px solid rgba(255, 255, 255, 0.5);
+  outline: 1px solid rgb(255, 255, 255, 0.5);
   outline-offset: 1px;
 }
 
 .swiper__pagination .swiper-pagination-bullet:active {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255, 0.5);
 }
 
 .swiper__slide-box {
@@ -284,8 +299,8 @@
     position: absolute;
     content: "";
     display: block;
-    width: 13px;
-    height: 9px;
+    width: 14px;
+    height: 10px;
     background-color: #ffffff;
     mask-repeat: no-repeat;
     mask-position: center;

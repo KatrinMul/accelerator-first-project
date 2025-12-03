@@ -1,43 +1,53 @@
 .footer {
   max-width: 320px;
   margin: 0 auto;
-  padding: 23px 0 20px;
+  padding: 0 0 16px;
 
   @media (min-width: $tablet) {
     max-width: 768px;
-    padding: 34px 0 20px;
+    padding: 0 0 20px;
   }
 
   @media (min-width: $desktop) {
     max-width: 1440px;
+    padding-bottom: 32px;
   }
 }
 
 .footer__container {
-  padding: 0 15px;
+  padding: 23px 15px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 23px;
+  row-gap: 10px;
+  border-top: 1px solid rgb(45, 56, 63, 0.3);
 
   @media (min-width: $tablet) {
-    padding: 0 45px;
+    padding: 34px 45px 0;
     gap: 34px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 32px 120px 0;
+    gap: 20px;
+  }
 }
+
 .footer__wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 23px;
+  row-gap: 21px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  @media (min-width: $desktop) {}
+  @media (min-width: $desktop) {
+    padding: 10px 0 10px 30px;
+  }
 }
 
 .footer__main-link {
@@ -65,17 +75,19 @@
   margin: 0;
   padding: 0;
   column-count: 2;
-  column-gap: 20px;
+  column-gap: 50px;
 
   @media (min-width: $tablet) {
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    gap: 15px;
   }
 
   @media (min-width: $desktop) {
-    gap: 20px;
+    gap: 21px;
+    justify-content: center;
+    margin-left: 27px;
   }
 }
 
@@ -83,7 +95,7 @@
   min-width: 120px;
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet) {
     min-width: fit-content;
@@ -102,8 +114,6 @@
   text-decoration: none;
 
   @media (min-width: $tablet) {
-    font-size: 14px;
-    line-height: 14px;
   }
 
   @media (min-width: $desktop) {
@@ -112,9 +122,18 @@
   }
 
   &--policy {
+    padding-top: 13px;
     font-weight: 300;
     font-size: 12px;
     line-height: 12px;
+
+    @media (min-width: $tablet) {
+      padding-top: 0;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 3px;
+    }
   }
 }
 
@@ -146,12 +165,13 @@
 
   @media (min-width: $desktop) {
     display: block;
-    min-width: 145px;
+    min-width: 200px;
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
     color: $base-color;
     text-decoration: none;
+    text-align: right;
   }
 }
 
@@ -167,7 +187,7 @@
 
 .footer__phone-link:active {
   color: $active-color;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .footer__phone-link:disabled {

@@ -1,18 +1,19 @@
 .contacts {
-  padding: 20px 0;
+  padding: 19px 0;
   margin: 0 auto;
   max-width: 320px;
 
   @media (min-width: $tablet) {
-    padding: 40px 0;
+    padding: 40px 0 39px;
     max-width: 768px;
   }
 
   @media (min-width: $desktop) {
-    padding: 100px 120px 95px;
+    padding: 100px 120px 93px;
     max-width: 1440px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -20,16 +21,36 @@
   padding: 0 15px;
 
   @media (min-width: $tablet) {
-    padding: 0 45px;
+    padding: 0 40px 0 45px;
   }
 
   @media (min-width: $desktop) {
     max-width: 600px;
+    padding: 0;
   }
 }
 
 .contacts__title {
-  margin-bottom: 22px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 21px;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 23px;
+    margin-bottom: 23px;
+  }
+}
+
+.contacts__title-double {
+  @media (min-width: $tablet) {
+    bottom: 0;
+  }
+  @media (min-width: $desktop) {
+    bottom: -3px;
+  }
 }
 
 .contacts p {
@@ -47,7 +68,7 @@
 
   @media (min-width: $desktop) {
     max-width: 500px;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 }
 
@@ -63,12 +84,12 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: $desktop) {
     flex-direction: column;
-    gap: 35px;
+    gap: 34px;
     margin: 0;
   }
 }
@@ -76,6 +97,14 @@
 .contacts__item {
   padding-left: 32px;
   position: relative;
+
+  @media (min-width: $tablet) {
+    padding-left: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 56px;
+  }
 
   &::before {
     position: absolute;
@@ -89,6 +118,17 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+
+    @media (min-width: $tablet) {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 26px;
+      height: 26px;
+      top: 11px;
+    }
   }
 
   &--phone::before {
@@ -120,7 +160,7 @@
   @media (min-width: $desktop) {
     font-size: 18px;
     line-height: 18px;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 }
 
@@ -133,7 +173,7 @@
   line-height: 20px;
 
   @media (min-width: $tablet) {
-    line-height: 12px;
+    line-height: 22px;
   }
 
   @media (min-width: $desktop) {
@@ -171,11 +211,13 @@
   @media (min-width: $tablet) {
     line-height: 12px;
     max-width: none;
+    padding-top: 5px;
   }
 
   @media (min-width: $desktop) {
     font-size: 16px;
     line-height: 24px;
+    padding-top: 0;
   }
 }
 

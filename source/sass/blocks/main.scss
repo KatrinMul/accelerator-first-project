@@ -1,29 +1,22 @@
 .main {
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.81)),
-    image-set(url('../../img/clouds-1@1x.webp'), url('../../img/clouds-1@1x.png'));
+  background-image: image-set(url("../../img/clouds-1@1x.webp"), url("../../img/clouds-1@1x.png"));
   background-size: 1176px 786px;
-  background-position: calc(50vw + 19px) 560px;
+  background-position: calc(50vw + 19px) 578px;
   background-repeat: no-repeat;
 
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.81)),
-      image-set(url('../../img/clouds-1@2x.webp'), url('../../img/clouds-1@2x.png'));
+  @media (resolution >= 2dppx) {
+    background-image: image-set(url("../../img/clouds-1@2x.webp"), url("../../img/clouds-1@2x.png"));
   }
 
   @media (min-width: $tablet) {
-    background-image: image-set(url('../../img/clouds-1@1x.webp'), url('../../img/clouds-1@1x.png'));
-    background-position: calc(50vw - 41px) 925px;
+    background-position: calc(50vw - 41px) 942px;
     background-size: 2046px 1630px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(url('../../img/clouds-1@2x.webp'), url('../../img/clouds-1@2x.png'));
-    }
   }
 
   @media (min-width: $desktop) {
-    background-position: calc(50vw + 118px) 642px;
+    background-position: calc(50vw + 118px) 674px;
   }
 }
 
@@ -38,12 +31,12 @@
     height: 401px;
     top: 4096px;
     right: calc(50% - 369px);
-    background-image: image-set(url('../../img/clouds-2@1x.webp'), url('../../img/clouds-2@1x.png'));
+    background-image: image-set(url("../../img/clouds-2@1x.webp"), url("../../img/clouds-2@1x.png"));
     background-size: 1200px 401px;
     background-position: 0 0;
 
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(url('../../img/clouds-2@2x.webp'), url('../../img/clouds-2@2x.png'));
+    @media (resolution >= 2dppx) {
+      background-image: image-set(url("../../img/clouds-2@2x.webp"), url("../../img/clouds-2@2x.png"));
     }
   }
 
@@ -64,12 +57,12 @@
     height: 263px;
     top: 4583px;
     left: calc(50% - 171px);
-    background-image: image-set(url('../../img/clouds-2@1x.webp'), url('../../img/clouds-2@1x.png'));
+    background-image: image-set(url("../../img/clouds-2@1x.webp"), url("../../img/clouds-2@1x.png"));
     background-size: 788px 263px;
     background-position: 0 0;
 
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(url('../../img/clouds-2@2x.webp'), url('../../img/clouds-2@2x.png'));
+    @media (resolution >= 2dppx) {
+      background-image: image-set(url("../../img/clouds-2@2x.webp"), url("../../img/clouds-2@2x.png"));
     }
   }
 
@@ -94,12 +87,12 @@
     height: 280px;
     top: 612px;
     left: calc(50% - 81px);
-    background-image: image-set(url('../../img/clouds-2@1x.webp'), url('../../img/clouds-2@1x.png'));
+    background-image: image-set(url("../../img/clouds-2@1x.webp"), url("../../img/clouds-2@1x.png"));
     background-size: 840px 280px;
     background-position: 0 0;
 
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(url('../../img/clouds-2@2x.webp'), url('../../img/clouds-2@2x.png'));
+    @media (resolution >= 2dppx) {
+      background-image: image-set(url("../../img/clouds-2@2x.webp"), url("../../img/clouds-2@2x.png"));
     }
   }
 

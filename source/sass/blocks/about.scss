@@ -14,29 +14,47 @@
   @media (min-width: $desktop) {
     padding: 100px 120px 100px 0;
     max-width: 1440px;
+    align-items: flex-start;
+  }
+}
+
+.about__picture {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    height: 350px;
+    width: 492px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    height: 498px;
+    width: 660px;
   }
 }
 
 .about__photo {
+  display: block;
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: 25% 50%;
-  transform: scale(1.02);
+  object-position: -78px -11px;
+  transform: scale(1.05);
 
   @media (min-width: $tablet) {
+    height: 328px;
+    width: 492px;
     transform: none;
-    height: 350px;
-    width: 542px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    object-position: -23px 17px;
   }
 
   @media (min-width: $desktop) {
     height: 498px;
-    width: 660px;
+    width: 724px;
+    object-position: -97px 3px;
   }
 }
 
@@ -54,6 +72,7 @@
 
   @media (min-width: $desktop) {
     max-width: 660px;
+    padding-top: 13px;
   }
 }
 
@@ -61,7 +80,7 @@
   font-weight: 800;
   font-size: 22px;
   line-height: 22px;
-  padding-top: 16px;
+  padding-top: 17px;
   margin: 0 0 42px;
   position: relative;
 
@@ -69,13 +88,23 @@
     min-width: 542px;
     font-size: 25px;
     line-height: 25px;
-    margin-bottom: 53px;
+    padding-top: 20px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop) {
+    padding-top: 32px;
     font-size: 35px;
     line-height: 35px;
-    margin-bottom: 74px;
+    margin-bottom: 59px;
+  }
+}
+
+.about__title-double {
+  bottom: 0;
+
+  @media (min-width: $desktop) {
+    bottom: 19px;
   }
 }
 
@@ -85,7 +114,11 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 26px;
+
+  @media (min-width: $tablet) {
+    gap: 28px;
+  }
 
   @media (min-width: $desktop) {
     padding-right: 75px;
@@ -102,17 +135,18 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  margin: 0 0 15px;
+  margin: 0 0 14px;
 
   @media (min-width: $tablet) {
     font-size: 18px;
     line-height: 18px;
+    margin-bottom: 12px;
   }
 
   @media (min-width: $desktop) {
     font-size: 21px;
     line-height: 21px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 }
 

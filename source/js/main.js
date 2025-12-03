@@ -13,7 +13,7 @@ nav.classList.add('nav--closed');
 navButton.addEventListener('click', () => {
   nav.classList.toggle('nav--closed');
   nav.classList.toggle('nav--opened');
-  if(nav.classList.contains('nav--opened')) {
+  if (nav.classList.contains('nav--opened')) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = '';
@@ -96,6 +96,7 @@ new Swiper('.training__swiper', {
   speed: 1500,
   spaceBetween: 20,
   slidesPerGroup: 1,
+  initialSlide: 2,
   navigation: {
     nextEl: '.training__swiper-button--next',
     prevEl: '.training__swiper-button--prev',
@@ -103,8 +104,10 @@ new Swiper('.training__swiper', {
   breakpoints: {
     768: {
       slidesPerView: 3,
+      initialSlide: 0,
     },
     1440: {
+      initialSlide: 0,
       slidesPerView: 4,
     }
   },
@@ -123,11 +126,12 @@ new Swiper('.reviews__swiper', {
     768: {
       slidesPerView: 'auto',
       slidesOffsetAfter: 60,
+      spaceBetween: 0,
     },
     1440: {
       slidesPerView: 'auto',
       slidesOffsetAfter: 220,
-      spaceBetween: 100,
+      spaceBetween: 90,
     },
   },
 });
@@ -197,8 +201,9 @@ handleSwiperState();
 
 window.addEventListener('resize', handleSwiperState);
 
-
-const inputs = document.querySelectorAll('.request__input');
+const form = document.querySelector('.request__form');
+const inputs = form.querySelectorAll('.request__input');
+const formButton = form.querySelector('.request__button');
 
 inputs.forEach((input) => {
   input.setAttribute('data-error-message', 'error');
@@ -209,9 +214,7 @@ function validateAndSetPlaceholder(input) {
   const errorMessage = input.getAttribute('data-error-message');
   let isValid = true;
 
-  if (input.value.trim() === '' && input.required) {
-    isValid = false;
-  } else if (input.type === 'email') {
+  if (input.type === 'email') {
     const emailPattern = /\S+@\S+\.\S+/;
     if (!emailPattern.test(input.value)) {
       isValid = false;
@@ -239,6 +242,14 @@ function validateAndSetPlaceholder(input) {
   return isValid;
 }
 
+formButton.addEventListener('click', () => {
+  if (!form.isValid) {
+    inputs.forEach((input) => {
+      validateAndSetPlaceholder(input);
+    });
+  }
+});
+
 inputs.forEach((input) => {
   input.addEventListener('focus', function () {
     this.classList.remove('error');
@@ -248,7 +259,9 @@ inputs.forEach((input) => {
   });
 
   input.addEventListener('blur', function () {
-    validateAndSetPlaceholder(this);
+    if (this.value === '') {
+      this.placeholder = this.getAttribute('data-placeholder-default');
+    }
   });
 
   input.addEventListener('input', function () {

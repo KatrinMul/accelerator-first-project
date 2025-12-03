@@ -1,16 +1,17 @@
 .instructor__wrapper {
   margin: 0 auto;
-  border: 1px solid rgba(2, 102, 193, 0.1);
+  border: 1px solid rgb(2, 102, 193, 0.1);
   padding: 15px;
-  min-height: 365px;
+  min-height: 356px;
   max-width: 290px;
+  background-color: #ffffff;
 
   @media (min-width: $tablet) {
     min-height: 388px;
   }
 
   @media (min-width: $desktop) {
-    min-height: 365px;
+    min-height: 356px;
   }
 }
 
@@ -22,7 +23,7 @@
   object-fit: cover;
 
   @media (min-width: $tablet) {
-    width: 183px;
+    width: 182px;
   }
 
   @media (min-width: $desktop) {
@@ -33,7 +34,7 @@
 .instructor__box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .instructor h4 {
@@ -47,7 +48,7 @@
   display: block;
   width: 24px;
   height: 24px;
-  border: 1px solid rgba(45, 56, 63, 0.3);
+  border: 1px solid rgb(45, 56, 63, 0.3);
   position: relative;
 }
 
@@ -70,11 +71,13 @@
 .instructor__link:hover {
   border-color: $base-color;
 }
+
 .instructor__link:focus {
   background-color: #ffffff;
   outline: none;
   border: none;
 }
+
 .instructor__link:active {
   background-color: $additional-color;
   border: none;
@@ -83,6 +86,7 @@
     background-color: $base-color-ondark;
   }
 }
+
 .instructor__link:disabled {
   border-color: $base-color;
   opacity: 0.3;

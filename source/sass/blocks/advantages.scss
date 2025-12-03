@@ -6,6 +6,7 @@
 
   @media (min-width: $tablet) {
     max-width: 768px;
+    padding: 40px 45px;
   }
 
   @media (min-width: $desktop) {
@@ -15,16 +16,32 @@
 }
 
 .advantages__title {
-  margin-bottom: 37px;
+  margin-bottom: 36px;
+  padding-top: 17px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+    padding-top: 20px;
+  }
 
   @media (min-width: $desktop) {
     margin-bottom: 50px;
+    padding-top: 35px;
   }
 }
 
 .advantages__title-double {
   left: 50%;
   transform: translateX(-50%);
+  bottom: 11px;
+
+  @media (min-width: $tablet) {
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 10px;
+  }
 }
 
 .advantages__list {
@@ -69,8 +86,9 @@
 
 .advantages__wrapper {
   width: 290px;
-  padding: 82px 10px 20px;
-  border: 1px solid rgba(2, 102, 193, 0.1);
+  min-height: 239px;
+  padding: 81px 9px 19px;
+  border: 1px solid rgb(2, 102, 193, 0.1);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -79,12 +97,16 @@
 
   @media (min-width: $tablet) {
     width: 324px;
-    padding: 92px 20px 30px;
+    min-height: 340px;
+    padding: 103px 19px 28px;
+    gap: 14px;
   }
 
   @media (min-width: $desktop) {
     width: 380px;
-    height: 329px;
+    min-height: 329px;
+    padding-top: 124px;
+    gap: 15px;
   }
 }
 
@@ -94,15 +116,21 @@
   position: absolute;
   width: 42px;
   height: 42px;
-  top: 20px;
+  top: 19px;
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid $additional-color;
 
   @media (min-width: $tablet) {
-    top: 30px;
+    top: 29px;
     width: 48px;
     height: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 39px;
+    width: 54px;
+    height: 54px;
   }
 }
 
@@ -112,7 +140,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 29px;
+  top: 28px;
   left: 50%;
   transform: translateX(-50%);
   background-color: $additional-color;
@@ -121,7 +149,11 @@
   mask-size: contain;
 
   @media (min-width: $tablet) {
-    top: 42px;
+    top: 41px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 54px;
   }
 }
 
@@ -146,7 +178,8 @@
 }
 
 .advantages h3 {
-  margin: 0;
+  text-align: center;
+  margin: 0 auto;
   padding: 0;
   font-weight: 600;
   font-size: 14px;
@@ -181,6 +214,20 @@
   @media (min-width: $tablet) {
     font-size: 14px;
     line-height: 22px;
+  }
+}
+
+.advantages__paragraph-break {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.advantages__paragraph-space {
+  padding-right: 4px;
+
+  @media (min-width: $desktop) {
+    padding-right: 0;
   }
 }
 

@@ -1,48 +1,49 @@
 .request {
   background: $additional-color;
-  background-image: image-set(url(../../img/form-background@1x.webp), url(../../img/form-background@1x.jpg));
-  background-size: cover;
-  background-position: 60% 50%;
+  background-image: image-set(url("../../img/form-background@1x.webp"), url("../../img/form-background@1x.jpg"));
+  background-repeat: no-repeat;
+  background-position: -600px -56px;
+  background-size: 1377px 747px;
   min-height: 638px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: image-set(url(../../img/form-background@2x.webp), url(../../img/form-background@2x.jpg));
+  @media (resolution >=2dppx) {
+    background-image: image-set(url("../../img/form-background@2x.webp"), url("../../img/form-background@2x.jpg"));
   }
 
   @media (min-width: $tablet) {
     min-height: 680px;
+    background-position: 61% 51%;
+    background-size: 191% 117%;
   }
 
   @media (min-width: $desktop) {
     min-height: 760px;
-    display: flex;
-    align-items: center;
+    background-size: 100% 100%;
   }
 }
 
 .request__wrapper {
-  padding: 174px 31px;
+  padding: 177px 31px 174px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 20px;
   max-width: 320px;
 
   @media (min-width: $tablet) {
-    padding: 174px 204px;
+    padding: 187px 204px 174px;
     max-width: 768px;
   }
 
   @media (min-width: $desktop) {
-    padding: 174px 40px;
+    padding: 296px 0 0;
     max-width: 1440px;
   }
 }
 
 .request h2 {
-  margin: 0;
+  margin: 0 0 17px;
   padding: 0;
   font-weight: 800;
   font-size: 22px;
@@ -52,17 +53,19 @@
   @media (min-width: $tablet) {
     font-size: 25px;
     line-height: 25px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $desktop) {
     font-size: 35px;
     line-height: 35px;
+    margin-bottom: 18px;
   }
 }
 
 .request p {
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 0 20px;
+  padding: 0 20px 0 21px;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -71,6 +74,12 @@
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 23px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 38px;
   }
 }
 
@@ -92,7 +101,7 @@
 }
 
 .request__input {
-  border: 1px solid rgba(2, 102, 193, 0.1);
+  border: 1px solid rgb(2, 102, 193, 0.1);
   border-radius: 2px;
   width: 258px;
   height: 50px;
@@ -101,11 +110,12 @@
   line-height: 16px;
   background-color: $base-color-ondark;
   padding: 17px 15px;
-  color: rgba(45, 56, 63, 0.5);
+  color: rgb(45, 56, 63, 0.5);
 
   @media (min-width: $tablet) {
     width: 360px;
     height: 56px;
+    padding: 17px 29px;
   }
 }
 
@@ -121,7 +131,7 @@
 
 .request__input:disabled {
   border-color: $disabled-color;
-  color: rgba(153, 153, 153, 0.5);
+  color: rgb(153, 153, 153, 0.5);
 }
 
 .request__input.error {
@@ -131,7 +141,7 @@
 
 .request__button {
   width: 258px;
-  height: 50px;
+  height: 58px;
 
   @media (min-width: $tablet) {
     width: 360px;

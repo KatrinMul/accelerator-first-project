@@ -1,6 +1,10 @@
 .gallery {
-  padding-top: 20px;
+  padding-top: 37px;
   padding-bottom: 3px;
+
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+  }
 
   @media (min-width: $desktop) {
     padding-top: 100px;
@@ -11,10 +15,31 @@
 
 .gallery__title {
   padding: 0 15px;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet) {
-    padding: 0 45px;
+    padding: 20px 45px 0;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 23px 120px 0;
+    margin-bottom: 24px;
+  }
+}
+
+.gallery__title-double {
+  left: 15px;
+  bottom: 11px;
+
+  @media (min-width: $tablet) {
+    left: 45px;
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    left: 120px;
+    bottom: -3px;
   }
 }
 
@@ -26,6 +51,13 @@
 
   @media (min-width: $tablet) {
     padding: 0 45px;
+    align-items: flex-end;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 120px;
+    margin-bottom: 45px;
   }
 }
 
@@ -84,7 +116,7 @@
   height: 266px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 3px;
 
   @media (min-width: $tablet) {
     width: 253px;
@@ -97,7 +129,13 @@
   }
 }
 
+.gallery__picture {
+  display: block;
+  height: fit-content;
+}
+
 .gallery__photo {
+  display: block;
   width: 158px;
   height: 266px;
   object-fit: cover;
@@ -114,17 +152,32 @@
 }
 
 .gallery__photo-pairs {
-  width: 158px;
-  height: 130px;
+  width: 157px;
+  height: 134px;
   object-fit: cover;
 
   @media (min-width: $tablet) {
-    width: 253px;
-    height: 206px;
+    width: 252px;
+    height: 209px;
   }
 
   @media (min-width: $desktop) {
     width: 284px;
-    height: 228px;
+    height: 233px;
+  }
+}
+
+.gallery__photo--third {
+  height: 125px;
+
+  @media (min-width: $tablet) {
+    height: 202px;
+  }
+}
+
+.gallery__picture:nth-child(2) .gallery__photo-pairs {
+  @media (min-width: $desktop) {
+    width: 284px;
+    height: 223px;
   }
 }
