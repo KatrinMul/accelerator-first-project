@@ -6,7 +6,7 @@
   background-size: 1377px 747px;
   min-height: 638px;
 
-  @media (resolution >=2dppx) {
+  @media (resolution >= 2dppx) {
     background-image: image-set(url("../../img/form-background@2x.webp"), url("../../img/form-background@2x.jpg"));
   }
 

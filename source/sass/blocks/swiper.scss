@@ -11,7 +11,7 @@
   &--caucasus {
     background-image: $slider-overlay, image-set(url("../../img/slide-background-caucasus@1x.webp"), url("../../img/slide-background-caucasus@1x.jpg"));
 
-    @media (resolution >=2dppx) {
+    @media (resolution >= 2dppx) {
       background-image: $slider-overlay, image-set(url("../../img/slide-background-caucasus@2x.webp"), url("../../img/slide-background-caucasus@2x.jpg"));
     }
   }
@@ -19,7 +19,7 @@
   &--kamchatka {
     background-image: $slider-overlay, image-set(url("../../img/slide-background-kamchatka@1x.webp"), url("../../img/slide-background-kamchatka@1x.jpg"));
 
-    @media (resolution >=2dppx) {
+    @media (resolution >= 2dppx) {
       background-image: $slider-overlay, image-set(url("../../img/slide-background-kamchatka@2x.webp"), url("../../img/slide-background-kamchatka@2x.jpg"));
     }
   }
@@ -27,7 +27,7 @@
   &--altai {
     background-image: $slider-overlay, image-set(url("../../img/slide-background-altai@1x.webp"), url("../../img/slide-background-altai@1x.jpg"));
 
-    @media (resolution >=2dppx) {
+    @media (resolution >= 2dppx) {
       background-image: $slider-overlay, image-set(url("../../img/slide-background-altai@2x.webp"), url("../../img/slide-background-altai@2x.jpg"));
     }
   }
@@ -50,6 +50,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 
   @media (min-width: $tablet) {
     max-width: 678px;

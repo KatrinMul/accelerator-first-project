@@ -167,17 +167,14 @@
   }
 }
 
-.gallery__photo--third {
+.gallery__photo-pairs--third {
   height: 125px;
 
   @media (min-width: $tablet) {
     height: 202px;
   }
-}
 
-.gallery__picture:nth-child(2) .gallery__photo-pairs {
   @media (min-width: $desktop) {
-    width: 284px;
     height: 223px;
   }
 }
