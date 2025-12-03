@@ -1,6 +1,6 @@
 .menu__link {
   display: block;
-  padding: 3px 5px;
+  padding: 4px 5px 3px;
   font-weight: 700;
   font-size: 14px;
   line-height: 14px;
@@ -8,6 +8,7 @@
   color: $base-color-ondark;
   text-transform: uppercase;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 
   @media (min-width: $tablet) {
     font-size: 16px;

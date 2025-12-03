@@ -51,6 +51,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding: 60px 0;
 
   @media (min-width: $tablet) {
     max-width: 678px;
@@ -60,6 +61,7 @@
   @media (min-width: $desktop) {
     display: block;
     margin: 0 auto;
+    padding: 0;
     position: relative;
     text-align: left;
     max-width: 1200px;
@@ -151,7 +153,7 @@
   }
 }
 
-.swiper__label:nth-child(2) {
+.swiper__label--level {
   padding-right: 20px;
 }
 
@@ -170,11 +172,11 @@
   mask-size: contain;
 }
 
-.swiper__label:first-child::before {
+.swiper__label--days::before {
   mask-image: url("/__spritemap#sprite-moon-view");
 }
 
-.swiper__label:nth-child(2)::before {
+.swiper__label--level::before {
   mask-image: url("/__spritemap#sprite-level-view");
 }
 
