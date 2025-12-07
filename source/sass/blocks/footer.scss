@@ -67,6 +67,7 @@
 
 .footer__main-link:focus {
   opacity: 0.8;
+  outline-style: solid;
   outline-color: $base-color;
   outline-offset: 2px;
 }

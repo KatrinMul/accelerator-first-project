@@ -192,6 +192,7 @@
 }
 
 .contacts__link:focus-visible {
+  width: fit-content;
   outline: 1px solid $base-color;
 }
 

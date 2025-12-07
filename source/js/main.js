@@ -1,6 +1,6 @@
 // https://swiperjs.com/get-started#installation
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 
 const DESKTOP_WIDTH = 1440;
@@ -30,18 +30,13 @@ menuLiks.forEach((link) => {
 
 
 new Swiper('.hero__swiper', {
-  modules: [Pagination],
+  modules: [Pagination, A11y],
   slidesPerView: 1,
   loop: true,
   speed: 1500,
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
-  },
-  a11y: {
-    enabled: true,
-    slideLinkClass: 'swiper__link',
-    scrollOnFocus: false,
+    onlyInViewport: true,
   },
   pagination: {
     el: '.swiper-pagination',

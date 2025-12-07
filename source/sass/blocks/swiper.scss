@@ -326,6 +326,7 @@
 }
 
 .swiper-button:focus {
+  outline: none;
   background-color: #ffffff;
 
   &::after {
@@ -335,6 +336,10 @@
 
 .swiper-button:active {
   background-color: $active-color;
+
+  &::after {
+    background-color: #ffffff;
+  }
 }
 
 .swiper-button:disabled {
