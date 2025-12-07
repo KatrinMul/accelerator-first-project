@@ -48,6 +48,7 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop) {
@@ -87,12 +88,14 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 15px;
+    max-width: 530px;
   }
 
   @media (min-width: $desktop) {
     gap: 21px;
     justify-content: center;
     margin-left: 27px;
+    max-width: 800px;
   }
 }
 

@@ -30,7 +30,7 @@
 
 .menu__link:focus {
   outline: none;
-  border: none;
+  border-bottom: 1px solid transparent;
 }
 
 .menu__link:focus-visible {
@@ -40,7 +40,7 @@
 }
 
 .menu__link:active {
-  border: none;
+  border-bottom: 1px solid transparent;
   outline: none;
   color: $active-color;
 }

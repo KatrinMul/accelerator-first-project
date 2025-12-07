@@ -101,6 +101,7 @@
 
   @media (min-width: $desktop) {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
   }
 }
@@ -167,7 +168,7 @@
   }
 }
 
-.gallery__photo-pairs--third {
+.gallery__photo-pairs--second {
   height: 125px;
 
   @media (min-width: $tablet) {

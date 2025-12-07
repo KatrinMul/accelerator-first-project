@@ -35,6 +35,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .instructor h4 {
@@ -42,6 +44,15 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  max-width: 210px;
+
+  @media (min-width: $tablet) {
+    max-width: 150px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 210px;
+  }
 }
 
 .instructor__link {
