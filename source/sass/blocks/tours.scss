@@ -379,7 +379,7 @@
 
 .tours__link:active {
   color: $active-color;
-  opacity: 1.0;
+  opacity: 1;
 
   &::after {
     background-color: $active-color;
